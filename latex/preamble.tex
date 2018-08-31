@@ -1,0 +1,235 @@
+%\usepackage[a4paper,left=4.5cm, top=3.5cm, bottom=3.5cm, right=4.5cm, heightrounded, headsep=2em, footskip=11mm, vmarginratio=1:1]{geometry}
+\usepackage[a4paper,margin=4cm,  heightrounded, headsep=2em, footskip=11mm, vmarginratio=1:1]{geometry}
+\makeatletter
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\makeatother
+
+
+
+
+\usepackage{fontspec}
+
+\usepackage{ifluatex}
+
+\usepackage{microtype}
+
+
+
+\setmainfont[Numbers=Lowercase]{IBMPlexSerif}
+\setsansfont[Numbers=Lowercase]{IBMPlexSans}
+\setmonofont[Numbers=Lowercase]{IBMPlexMono}
+
+
+\usepackage[english]{babel}
+
+\usepackage[all]{nowidow}
+
+\usepackage[usenames, dvipsnames]{color}
+\definecolor{upol-dGrey}{rgb}{0.36470588235,0.36862745098,0.37647058823}
+\definecolor{upol-lGrey}{rgb}{0.8,0.8,0.8}
+\definecolor{upol-brandBlue}{rgb}{0,0.43529411764,0.67843137254}
+
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\definecolor{titlepagecolor}{cmyk}{1,.38,0,.15} %C100 M38 Y0 K15
+\definecolor{namecolor}{cmyk}{0, 0, 0, .0980} 
+\usepackage{textcase}
+
+
+\usepackage{setspace}
+
+\makeatletter\let\Title\@title\makeatother
+%\makeatletter\let\Author\@author\makeatother
+
+
+
+\usepackage{sectsty}
+\allsectionsfont{\color{upol-dGrey}\sffamily}
+\chapterfont{\color{upol-dGrey}\raggedleft\thispagestyle{empty}}
+
+
+
+
+
+\usepackage{floatrow}
+\floatsetup[table]{font=sf}
+\floatsetup[figure]{font=sf}
+\floatsetup[tikzpicture]{font=sf}
+
+\usepackage[font={color=upol-dGrey}, labelfont={color=upol-dGrey}]{caption}
+
+
+
+\makeatletter
+\def\verbatim@font{\linespread{1}\footnotesize\ttfamily}
+\makeatother
+
+
+
+\makeatletter
+\renewenvironment{figure}[1][\fps@figure]{
+  \edef\@tempa{\noexpand\@float{figure}[#1]} 
+  \@tempa
+  \sffamily
+}{
+  \end@float
+}
+\renewenvironment{table}[1][\fps@table]{
+  \edef\@tempa{\noexpand\@float{table}[#1]} 
+  \@tempa
+  \sffamily
+  \footnotesize
+}{
+  \end@float
+}
+\makeatother
+
+\usepackage{tabularx}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+
+\usepackage{lipsum, kantlipsum} % just for testing
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\footnotesize\nouppercase{\leftmark}}
+\fancyhead[LO]{\footnotesize\nouppercase{\rightmark}}
+\setlength{\headheight}{14.5pt} % as requested by fan
+\renewcommand{\headrulewidth}{0pt}
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter \ . \  #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection \ \ #1}{}}
+
+
+
+
+
+%\setcounter{secnumdepth}{5}
+%\setsecnumdepth{subsubsection}
+%\maxtocdepth{subsubsection}
+
+
+\setlength{\skip\footins}{3em}
+\renewcommand\footnoterule{{\hrule height 0pt}} % a long blue line
+
+
+
+\usepackage{colortbl}
+\arrayrulecolor{gray}
+
+
+
+
+
+
+
+\usepackage{booktabs}
+
+\usepackage{pdfpages}
+
+
+
+
+
+
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage[Bjornstrup]{fncychap}
+%\renewcommand{\CNoV}{\raggedleft\sffamily\selectfont\HUGE}
+  \ChNumVar{\Huge\sffamily\selectfont}
+\renewcommand{\DOCH}{%
+   \settowidth{\py}{\CNoV\thechapter}
+  \addtolength{\py}{1em}      % Amount of space by which the
+%                                % number is shifted right
+   \fboxsep=0pt%
+   \colorbox[gray]{.85}{\rule{0pt}{50pt}\parbox[b]{\textwidth}{\hfill}}%
+   \kern-\py\raise20pt%
+   \hbox{\color{gray}\CNoV\thechapter}\\%
+}
+
+\makeatletter
+\renewcommand*{\@makechapterhead}[1]{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 040920
+        \DOCH
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 060424
+      \DOTI{#1}%
+    \else%
+      \DOTIS{#1}%
+    \fi
+  }}
+% For the case \chapter*:
+\renewcommand*{\@makeschapterhead}[1]{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \DOTIS{#1}
+    \vskip 0\p@
+  }}
+\makeatother
+
+
+
+
+
+\usepackage{tikz,tikz-qtree}
+
+
+\tikzstyle{every picture}+=[font=\sffamily]
+
+\usepackage{listings}
+\lstset{ %Formatting for code in appendix
+	backgroundcolor = \color{gray},
+	language=Python,
+	basicstyle=\singlespacing\footnotesize\ttfamily\color{white},
+	numbers=left,
+	stepnumber=1,
+	showstringspaces=true,
+	tabsize=2,
+	breaklines=true,
+	breakatwhitespace=false,
+	xleftmargin=3em,framexleftmargin=3em, numberstyle=\ttfamily,
+}
+
+\usepackage{datetime}
+
+%\let\oldmaketitle\maketitle
+%\AtBeginDocument{\let\maketitle\relax}
+
+
+
+
+\usepackage{catchfilebetweentags}
+
+\usepackage[autostyle]{csquotes}  
+\usepackage{enumerate}
+
+
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{36}{48}} 
+\makeatother
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+
+\usepackage{gb4e,cgloss}
+\noautomath
+
+
+

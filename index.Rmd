@@ -1,0 +1,83 @@
+---
+title: "DPs Syntax in acquisition"
+subtitle: "A case study on Italian L2 by Czech ad Slovak learners"
+author: "Marco Petolicchio"
+institution: "Dept. of Romance Languages. Palacky University, Olomouc (CZ)"
+abstract: "Czech and Slovak are languages which don't exhibit a manifest position for the Articles in the Determiner Phrase. The aim of this paper is to show how this structure is accessed during the learning of Italian, a language which presents the articles as for the standard behavior for nouns.\\par
+	\\textbf{Keywords:} Determiner Phrase, Italian L2, Second Language Acquisition, Syntax"
+site: bookdown::bookdown_site
+documentclass: scrartcl
+output:
+  bookdown::gitbook: default
+  bookdown::pdf_book:
+    template: null
+    pandoc_args:
+      - --filter
+      - pangloss
+    includes: 
+      in_header: latex/preamble.tex
+    latex_engine: xelatex
+    citation_package: natbib
+    keep_tex: yes
+classoption: [a4paper,twoside,12pt,chapterprefix=false, bibliography=totocnumbered,listof=flat]
+bibliography: [bibliography.bib]
+biblio-style: apa
+link-citations: yes
+github-repo: 
+description: ""
+always_allow_html: yes
+
+---
+
+
+
+
+\clearpage
+
+# Introduction
+
+
+Two hypothesis: DP as Spec or Phrase.
+
+```{r tree1, echo=FALSE, engine='tikz', out.width='70%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='DP and NP phrases', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
+
+\begin{tikzpicture}
+	\begin{scope}
+		\Tree [ .NP [ .DP D ] [ .N N [ .{...} ] ] ] 
+	\end{scope}
+	\begin{scope}[xshift=12em]
+		\Tree [.root(X) [ .mod(X) head(mod(X)) ] [ .proj(X) head(X) [ .comp(X) ] ] ]
+	\end{scope}
+	\begin{scope}[yshift=12em]
+		\Tree [.DP D [ .NP N [ .{...} ] ] ]
+	\end{scope}
+	\begin{scope}[yshift=12em, xshift=12em]
+		\Tree [.root(Y) head(Y) [ .root(X) head(X) [ .comp(X) ] ] ]
+	\end{scope}
+\end{tikzpicture}
+```
+
+
+# The development of corpus
+
+# Case Study: The usage of DET
+
+## Test
+
+Provide 10 noun phrases with different referential structure in terms of animateness with a neutralized article. The students are invited to write full sentences for each one. 
+
+Goals:
+
+* Test the syntactic distribution of phrases (SUBJ vs OBJ)
+* Test the distribution of DETs ([+def], [-def], Ø)
+
+
+
+
+# Conclusion
+
+
+
+# Financial coverage
+
+This work was supported by the funding grant XXX.
