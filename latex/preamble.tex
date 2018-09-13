@@ -28,9 +28,18 @@
 
 \usepackage[english]{babel}
 
+
+
+
+
 \usepackage[all]{nowidow}
 
-\usepackage[usenames, dvipsnames]{color}
+
+
+
+
+
+\usepackage[usenames, dvipsnames]{xcolor}
 \definecolor{upol-dGrey}{rgb}{0.36470588235,0.36862745098,0.37647058823}
 \definecolor{upol-lGrey}{rgb}{0.8,0.8,0.8}
 \definecolor{upol-brandBlue}{rgb}{0,0.43529411764,0.67843137254}
@@ -102,7 +111,8 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[RE]{\footnotesize\nouppercase{\leftmark}}
+%\fancyhead[RE]{\footnotesize\nouppercase{\leftmark}}
+\fancyhead[RE]{\footnotesize\nouppercase{M. Petolicchio, \textit{DPs Syntax in acquisition}}}
 \fancyhead[LO]{\footnotesize\nouppercase{\rightmark}}
 \setlength{\headheight}{14.5pt} % as requested by fan
 \renewcommand{\headrulewidth}{0pt}
@@ -233,3 +243,22 @@
 
 
 
+\usepackage{amsthm}
+
+\theoremstyle{plain} % default
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{corollary}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{postulate}{Postulate}[section]
+\newtheorem{problem}{Problem}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{case}{Case}

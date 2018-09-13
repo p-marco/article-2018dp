@@ -1,4 +1,4 @@
-\documentclass[a4paper,twoside,12pt,chapterprefix=false,bibliography=totocnumbered,listof=flat]{scrartcl}
+\documentclass[a4paper,twoside,12pt,chapterprefix=false,listof=flat]{scrartcl}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -31,9 +31,58 @@
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apa}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 \IfFileExists{parskip.sty}{%
 \usepackage{parskip}
 }{% else
@@ -89,9 +138,18 @@
 
 \usepackage[english]{babel}
 
+
+
+
+
 \usepackage[all]{nowidow}
 
-\usepackage[usenames, dvipsnames]{color}
+
+
+
+
+
+\usepackage[usenames, dvipsnames]{xcolor}
 \definecolor{upol-dGrey}{rgb}{0.36470588235,0.36862745098,0.37647058823}
 \definecolor{upol-lGrey}{rgb}{0.8,0.8,0.8}
 \definecolor{upol-brandBlue}{rgb}{0,0.43529411764,0.67843137254}
@@ -163,7 +221,8 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[RE]{\footnotesize\nouppercase{\leftmark}}
+%\fancyhead[RE]{\footnotesize\nouppercase{\leftmark}}
+\fancyhead[RE]{\footnotesize\nouppercase{M. Petolicchio, \textit{DPs Syntax in acquisition}}}
 \fancyhead[LO]{\footnotesize\nouppercase{\rightmark}}
 \setlength{\headheight}{14.5pt} % as requested by fan
 \renewcommand{\headrulewidth}{0pt}
@@ -292,6 +351,28 @@
 \usepackage{gb4e,cgloss}
 \noautomath
 
+
+
+\usepackage{amsthm}
+
+\theoremstyle{plain} % default
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{corollary}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{postulate}{Postulate}[section]
+\newtheorem{problem}{Problem}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{case}{Case}
+
 \title{DPs Syntax in acquisition}
 \providecommand{\subtitle}[1]{}
 \subtitle{A case study on Italian L2 by Czech ad Slovak learners}
@@ -317,6 +398,53 @@ Language Acquisition, Syntax
 
 \section{Introduction}\label{introduction}
 
+Czech (\texttt{cs}) and Slovak (\texttt{sk}) are languages of the Slavic
+branch in the Indo-european family. Alongside a certain morphological
+complexity in noun declension systems, these languages -- except for
+Bulgarian and Macedonian \citep[ in \citet{wals}]{wals-37} -- don't show
+an overt realization of the Determiner position inside the noun phrase
+\citep{harkins1953}. Conversly, Italian (\texttt{it}) and the other
+romance languages explicit that position as a default behaviour, usually
+with a free morpheme before the noun\footnote{Otherwise, Romanian uses a
+  intralexematic suffixation for the article, which falls in the end of
+  the word.}:
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\tightlist
+\item
+  Slavic languages
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    (\texttt{cs}, \emph{Reference})\\
+    \gll    Viděl jsem Ø/?ten chlapec který běží\\
+    See.PTCP.PST AUX.1sg DEM Boy.SG pro Run.3sg\\
+    \glt        
+  \end{enumerate}
+\item
+  Romance languages
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    (\texttt{it}, \emph{Reference})\\
+    \gll    Ho visto un/il/*Ø ragazzo che corre\\
+    AUX.1sg See.PTCP.PST DET Boy.SG pro Run.3sg\\
+    \glt  
+  \item
+    (\texttt{fr}, \emph{Reference})\\
+    \gll    J'ai vu un/le/?Ø garçon courir\\
+    I.AUX.1sg See.PTCP.PST DET Boy.SG Run\\
+    \glt  
+  \end{enumerate}
+\end{enumerate}
+
+\section{Theoretical background}\label{theoretical-background}
+
 Two hypothesis: DP as Spec or Phrase.
 
 \begin{figure}
@@ -328,12 +456,30 @@ Two hypothesis: DP as Spec or Phrase.
 \caption{DP and NP phrases}\label{fig:tree1}
 \end{figure}
 
-\section{The development of corpus}\label{the-development-of-corpus}
+\subsection{Determiners in Italian}\label{determiners-in-italian}
 
-\section{Case Study: The usage of
-DET}\label{case-study-the-usage-of-det}
+\subsection{Implications for the DP-Hypothesis in
+Italian}\label{implications-for-the-dp-hypothesis-in-italian}
 
-\subsection{Test}\label{test}
+\section{Case Study}\label{case-study}
+
+\subsection{Retrieve the linguistic
+data}\label{retrieve-the-linguistic-data}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(df, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill=}\NormalTok{df}\OperatorTok{$}\NormalTok{L1, }\DataTypeTok{y=}\KeywordTok{abs}\NormalTok{(}\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{nrow}\NormalTok{(df))), }\DataTypeTok{x=}\NormalTok{df}\OperatorTok{$}\NormalTok{Corpus)) }\OperatorTok{+}\StringTok{ }
+\StringTok{    }\KeywordTok{geom_bar}\NormalTok{( }\DataTypeTok{stat=}\StringTok{"identity"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x=}\StringTok{"Corpora"}\NormalTok{, }\DataTypeTok{y=}\StringTok{"Number of texts"}\NormalTok{, }\DataTypeTok{color=}\StringTok{"Native Language"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/graphCorpora-1.pdf}
+\caption{\label{fig:graphCorpora}Number of texts by different Corpora}
+\end{figure}
+
+\subsection{Perform a test}\label{perform-a-test}
 
 Provide 10 noun phrases with different referential structure in terms of
 animateness with a neutralized article. The students are invited to
@@ -353,7 +499,16 @@ Goals:
 
 \section{Financial coverage}\label{financial-coverage}
 
-This work was supported by the funding grant XXX.
+This work was partially supported by the funding grant XXX.
+
+\section{Abbreviations}\label{abbreviations}
+
+Languages are indicated by the abbreviations provided in the standard
+ISO 639-1 format \citep{iso639-1}. The linguistic abbreviations adher to
+the widespreadly recognized \emph{Leipzig Glossing Rules}
+\citep{leipzigGlossingRules}.
+
+\section{References}\label{references}
 
 \bibliography{bibliography.bib}
 

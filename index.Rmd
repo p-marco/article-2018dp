@@ -8,33 +8,81 @@ abstract: "Czech and Slovak are languages which don't exhibit a manifest positio
 site: bookdown::bookdown_site
 documentclass: scrartcl
 output:
-  bookdown::gitbook: default
+  bookdown::gitbook: 
+    split_by: none
+    split_bibliography: false
+    config:
+      sharing: false
   bookdown::pdf_book:
     template: null
     pandoc_args:
-      - --filter
-      - pangloss
     includes: 
       in_header: latex/preamble.tex
     latex_engine: xelatex
     citation_package: natbib
     keep_tex: yes
-classoption: [a4paper,twoside,12pt,chapterprefix=false, bibliography=totocnumbered,listof=flat]
+classoption: [a4paper,twoside,12pt,chapterprefix=false,listof=flat]
 bibliography: [bibliography.bib]
 biblio-style: apa
 link-citations: yes
 github-repo: 
 description: ""
 always_allow_html: yes
-
 ---
 
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(knitr)
+
+options(kableExtra.latex.load_packages = FALSE)
+library(kableExtra)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+df <- read.csv('data/sentences.csv', header = T, stringsAsFactors = F)
+
+```
 
 
 \clearpage
 
+
+
+
+
 # Introduction
+
+
+Czech (`cs`) and Slovak (`sk`) are languages of the Slavic branch in the Indo-european family. Alongside a certain morphological complexity in noun declension systems, these languages -- except for Bulgarian and Macedonian [@wals-37 in @wals] -- don't show an overt realization of the Determiner position inside the noun phrase [@harkins1953]. Conversly, Italian (`it`) and the other romance languages explicit that position as a default behaviour, usually with a free morpheme before the noun^[Otherwise, Romanian uses a intralexematic suffixation for the article, which falls in the end of the word.]:
+
+
+(@)	Slavic languages	
+	a.	(`cs`, *Reference*)  
+		\gll 	Viděl 		 jsem 	Ø/?ten 	chlapec který 	běží  
+			 	See.PTCP.PST AUX.1sg DEM 	Boy.SG	pro 	Run.3sg  
+		\glt 	    
+(@) Romance languages
+	a.	(`it`, *Reference*)  
+		\gll 	Ho 	 	visto 			un/il/\*Ø 	ragazzo che corre  
+			 	AUX.1sg See.PTCP.PST 	DET 		Boy.SG 	pro Run.3sg  
+		\glt  
+	a.	(`fr`, *Reference*)  
+		\gll 	J'ai 		vu 			 un/le/?Ø 	garçon 	courir  
+				I.AUX.1sg 	See.PTCP.PST DET 		Boy.SG 	Run  
+		\glt  
+
+
+
+
+
+
+
+
+
+# Theoretical background
+
+
 
 
 Two hypothesis: DP as Spec or Phrase.
@@ -58,11 +106,50 @@ Two hypothesis: DP as Spec or Phrase.
 ```
 
 
-# The development of corpus
 
-# Case Study: The usage of DET
 
-## Test
+
+
+## Determiners in Italian
+
+
+
+
+
+
+
+
+## Implications for the DP-Hypothesis in Italian
+
+
+
+
+
+
+
+
+
+# Case Study
+
+
+
+
+
+
+
+
+## Retrieve the linguistic data 
+
+
+
+```{r graphCorpora, echo=TRUE, fig.width=7, fig.height=4, message=FALSE, fig.cap='Number of texts by different Corpora'}
+ggplot(df, aes(fill=df$L1, y=abs(rnorm(nrow(df))), x=df$Corpus)) + 
+	geom_bar( stat="identity") + labs(x="Corpora", y="Number of texts", color="Native Language")
+```
+
+
+
+## Perform a test 
 
 Provide 10 noun phrases with different referential structure in terms of animateness with a neutralized article. The students are invited to write full sentences for each one. 
 
@@ -74,10 +161,39 @@ Goals:
 
 
 
+
+
+
+
+
+
 # Conclusion
+
+
+
+
+
+
+
+
+
 
 
 
 # Financial coverage
 
-This work was supported by the funding grant XXX.
+This work was partially supported by the funding grant XXX.
+
+
+
+
+
+# Abbreviations
+
+Languages are indicated by the abbreviations provided in the standard ISO 639-1 format [@iso639-1]. The linguistic abbreviations adher to the widespreadly recognized *Leipzig Glossing Rules* [@leipzigGlossingRules].
+
+
+
+
+
+# References

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DPs Syntax in acquisition</title>
+  <meta name="description" content="DPs Syntax in acquisition">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="DPs Syntax in acquisition" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="DPs Syntax in acquisition" />
+  
+  
+  
+
+<meta name="author" content="Marco Petolicchio">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path=""><a href="#introduction"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path=""><a href="#theoretical-background"><i class="fa fa-check"></i><b>2</b> Theoretical background</a><ul>
+<li class="chapter" data-level="2.1" data-path=""><a href="#determiners-in-italian"><i class="fa fa-check"></i><b>2.1</b> Determiners in Italian</a></li>
+<li class="chapter" data-level="2.2" data-path=""><a href="#implications-for-the-dp-hypothesis-in-italian"><i class="fa fa-check"></i><b>2.2</b> Implications for the DP-Hypothesis in Italian</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path=""><a href="#case-study"><i class="fa fa-check"></i><b>3</b> Case Study</a><ul>
+<li class="chapter" data-level="3.1" data-path=""><a href="#retrieve-the-linguistic-data"><i class="fa fa-check"></i><b>3.1</b> Retrieve the linguistic data</a></li>
+<li class="chapter" data-level="3.2" data-path=""><a href="#perform-a-test"><i class="fa fa-check"></i><b>3.2</b> Perform a test</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path=""><a href="#conclusion"><i class="fa fa-check"></i><b>4</b> Conclusion</a></li>
+<li class="chapter" data-level="5" data-path=""><a href="#financial-coverage"><i class="fa fa-check"></i><b>5</b> Financial coverage</a></li>
+<li class="chapter" data-level="6" data-path=""><a href="#abbreviations"><i class="fa fa-check"></i><b>6</b> Abbreviations</a></li>
+<li class="chapter" data-level="7" data-path=""><a href="#references"><i class="fa fa-check"></i><b>7</b> References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DPs Syntax in acquisition</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">DPs Syntax in acquisition</h1>
+<h3 class="subtitle"><em>A case study on Italian L2 by Czech ad Slovak learners</em></h3>
+<h4 class="author"><em>Marco Petolicchio</em></h4>
+<div class="abstract">
+<p class="abstract">Abstract</p>
+Czech and Slovak are languages which don’t exhibit a manifest position for the Articles in the Determiner Phrase. The aim of this paper is to show how this structure is accessed during the learning of Italian, a language which presents the articles as for the standard behavior for nouns. Determiner Phrase, Italian L2, Second Language Acquisition, Syntax
+</div>
+</div>
+
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>Czech (<code>cs</code>) and Slovak (<code>sk</code>) are languages of the Slavic branch in the Indo-european family. Alongside a certain morphological complexity in noun declension systems, these languages – except for Bulgarian and Macedonian <span class="citation">(Dryer <a href="#ref-wals-37">2013</a> in <span class="citation">Dryer and Haspelmath (<a href="#ref-wals">2013</a>)</span>)</span> – don’t show an overt realization of the Determiner position inside the noun phrase <span class="citation">(Harkins <a href="#ref-harkins1953">1953</a>)</span>. Conversly, Italian (<code>it</code>) and the other romance languages explicit that position as a default behaviour, usually with a free morpheme before the noun<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>:</p>
+<ol class="example" style="list-style-type: decimal">
+<li>Slavic languages
+<ol style="list-style-type: lower-alpha">
+<li>(<code>cs</code>, <em>Reference</em>)<br />
+Viděl jsem Ø/?ten chlapec který běží<br />
+See.PTCP.PST AUX.1sg DEM Boy.SG pro Run.3sg<br />
+</li>
+</ol></li>
+<li>Romance languages
+<ol style="list-style-type: lower-alpha">
+<li>(<code>it</code>, <em>Reference</em>)<br />
+Ho visto un/il/*Ø ragazzo che corre<br />
+AUX.1sg See.PTCP.PST DET Boy.SG pro Run.3sg<br />
+</li>
+<li>(<code>fr</code>, <em>Reference</em>)<br />
+J’ai vu un/le/?Ø garçon courir<br />
+I.AUX.1sg See.PTCP.PST DET Boy.SG Run<br />
+</li>
+</ol></li>
+</ol>
+</div>
+<div id="theoretical-background" class="section level1">
+<h1><span class="header-section-number">2</span> Theoretical background</h1>
+<p>Two hypothesis: DP as Spec or Phrase.</p>
+<div class="figure" style="text-align: center"><span id="fig:tree1"></span>
+<img src="_main_files/figure-html/tree1-1.svg" alt="DP and NP phrases" width="70%" />
+<p class="caption">
+Figure 2.1: DP and NP phrases
+</p>
+</div>
+<div id="determiners-in-italian" class="section level2">
+<h2><span class="header-section-number">2.1</span> Determiners in Italian</h2>
+</div>
+<div id="implications-for-the-dp-hypothesis-in-italian" class="section level2">
+<h2><span class="header-section-number">2.2</span> Implications for the DP-Hypothesis in Italian</h2>
+</div>
+</div>
+<div id="case-study" class="section level1">
+<h1><span class="header-section-number">3</span> Case Study</h1>
+<div id="retrieve-the-linguistic-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> Retrieve the linguistic data</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(df, <span class="kw">aes</span>(<span class="dt">fill=</span>df<span class="op">$</span>L1, <span class="dt">y=</span><span class="kw">abs</span>(<span class="kw">rnorm</span>(<span class="kw">nrow</span>(df))), <span class="dt">x=</span>df<span class="op">$</span>Corpus)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_bar</span>( <span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Corpora&quot;</span>, <span class="dt">y=</span><span class="st">&quot;Number of texts&quot;</span>, <span class="dt">color=</span><span class="st">&quot;Native Language&quot;</span>)</code></pre></div>
+<div class="figure"><span id="fig:graphCorpora"></span>
+<img src="_main_files/figure-html/graphCorpora-1.png" alt="Number of texts by different Corpora" width="672" />
+<p class="caption">
+Figure 3.1: Number of texts by different Corpora
+</p>
+</div>
+</div>
+<div id="perform-a-test" class="section level2">
+<h2><span class="header-section-number">3.2</span> Perform a test</h2>
+<p>Provide 10 noun phrases with different referential structure in terms of animateness with a neutralized article. The students are invited to write full sentences for each one.</p>
+<p>Goals:</p>
+<ul>
+<li>Test the syntactic distribution of phrases (SUBJ vs OBJ)</li>
+<li>Test the distribution of DETs ([+def], [-def], Ø)</li>
+</ul>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1><span class="header-section-number">4</span> Conclusion</h1>
+</div>
+<div id="financial-coverage" class="section level1">
+<h1><span class="header-section-number">5</span> Financial coverage</h1>
+<p>This work was partially supported by the funding grant XXX.</p>
+</div>
+<div id="abbreviations" class="section level1">
+<h1><span class="header-section-number">6</span> Abbreviations</h1>
+<p>Languages are indicated by the abbreviations provided in the standard ISO 639-1 format <span class="citation">(ISO <a href="#ref-iso639-1">2002</a>)</span>. The linguistic abbreviations adher to the widespreadly recognized <em>Leipzig Glossing Rules</em> <span class="citation">(Comrie, Haspelmath, and Bickel <a href="#ref-leipzigGlossingRules">2008</a>)</span>.</p>
+</div>
+<div id="references" class="section level1">
+<h1><span class="header-section-number">7</span> References</h1>
+
+<div id="refs" class="references">
+<div id="ref-leipzigGlossingRules">
+<p>Comrie, Bernard, Martin Haspelmath, and Balthasar Bickel. 2008. “The Leipzig Glossing Rules: Conventions for Interlinear Morpheme-by-Morpheme Glosses.”</p>
+</div>
+<div id="ref-wals-37">
+<p>Dryer, Matthew S. 2013. “Definite Articles.” In <em>The World Atlas of Language Structures Online</em>, edited by Matthew S. Dryer and Martin Haspelmath. Leipzig: Max Planck Institute for Evolutionary Anthropology. <a href="https://wals.info/chapter/37" class="uri">https://wals.info/chapter/37</a>.</p>
+</div>
+<div id="ref-wals">
+<p>Dryer, Matthew S., and Martin Haspelmath, eds. 2013. <em>WALS Online</em>. Leipzig: Max Planck Institute for Evolutionary Anthropology. <a href="https://wals.info/" class="uri">https://wals.info/</a>.</p>
+</div>
+<div id="ref-harkins1953">
+<p>Harkins, William E. 1953. <em>A Modern Czech Grammar</em>. New York: King’s Crown Press.</p>
+</div>
+<div id="ref-iso639-1">
+<p>ISO. 2002. “ISO 639-1:2002 – Codes for the Representation of Names of Languages – Part 1: Alpha-2 Code.” International Organization for Standardization, Geneva, Switzerland. <a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=22109" class="uri">http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=22109</a>.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Otherwise, Romanian uses a intralexematic suffixation for the article, which falls in the end of the word.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
