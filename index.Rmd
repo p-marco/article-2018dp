@@ -54,7 +54,7 @@ df <- read.csv('data/sentences.csv', header = T, stringsAsFactors = F)
 # Introduction
 
 
-Czech (`cs`) and Slovak (`sk`) are languages of the Slavic branch in the Indo-european family. Alongside a certain morphological complexity in noun declension systems, these languages -- except for Bulgarian and Macedonian [@wals-37 in @wals] -- don't show an overt realization of the Determiner position inside the noun phrase [@harkins1953]. Conversly, Italian (`it`) and the other romance languages explicit that position as a default behaviour, usually with a free morpheme before the noun^[Otherwise, Romanian uses a intralexematic suffixation for the article, which falls in the end of the word.]:
+Czech (`cs`) and Slovak (`sk`) are languages of the Slavic branch in the Indo-european family. Alongside a certain morphological complexity in noun declension systems, these languages -- except for Bulgarian and Macedonian [@wals-37 in @wals] -- don't show an overt realization of the Determiner position inside the noun phrase [@harkins1953]. Conversly, Italian (`it`) and the other romance languages explicit that position as a default behaviour, usually with a free morpheme before the noun -- with the exception of Romanian, which uses a intralexematic suffixation on the noun for the article -- :
 
 
 (@)	Slavic languages	
@@ -180,7 +180,7 @@ Goals:
 
 
 
-# Financial coverage
+# Financial coverage {-}
 
 This work was partially supported by the funding grant XXX.
 
@@ -188,7 +188,7 @@ This work was partially supported by the funding grant XXX.
 
 
 
-# Abbreviations
+# Abbreviations {-}
 
 Languages are indicated by the abbreviations provided in the standard ISO 639-1 format [@iso639-1]. The linguistic abbreviations adher to the widespreadly recognized *Leipzig Glossing Rules* [@leipzigGlossingRules].
 
