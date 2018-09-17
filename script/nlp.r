@@ -9,6 +9,10 @@ df <- read.csv('../data/sentences.csv', header = T, stringsAsFactors = F)
 
 #during first time model download execute the below line too
 # We do need to execute the next code before running udmodel_english
+
+
+
+
 #model <- udpipe_download_model(language = "italian")
 
 

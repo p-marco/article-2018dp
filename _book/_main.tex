@@ -133,7 +133,7 @@
 
 \setmainfont[Numbers=Lowercase]{IBMPlexSerif}
 \setsansfont[Numbers=Lowercase]{IBMPlexSans}
-\setmonofont[Numbers=Lowercase]{IBMPlexMono}
+\setmonofont[Numbers=Lowercase, Scale=.8]{IBMPlexMono}
 
 
 \usepackage[english]{babel}
@@ -350,7 +350,7 @@
 
 \usepackage{gb4e,cgloss}
 \noautomath
-
+\let\eachwordone=\itshape
 
 
 \usepackage{amsthm}
@@ -398,53 +398,75 @@ Language Acquisition, Syntax
 
 \section{Introduction}\label{introduction}
 
-Czech (\texttt{cs}) and Slovak (\texttt{sk}) are languages of the Slavic
-branch in the Indo-european family. Alongside a certain morphological
-complexity in noun declension systems, these languages -- except for
-Bulgarian and Macedonian \citep[ in \citet{wals}]{wals-37} -- don't show
-an overt realization of the Determiner position inside the noun phrase
-\citep{harkins1953}. Conversly, Italian (\texttt{it}) and the other
+Czech (\texttt{ces}) and Slovak (\texttt{slk}) are languages of the
+Slavic branch in the Indo-european family. Alongside a certain
+morphological complexity in noun declension systems, these languages
+--except for Bulgarian (\ref{exm:dpBul}) and Macedonian \citep[ in
+\citet{wals}]{wals-37}-- don't show an overt realization of the
+Determiner position inside the noun phrase (\ref{exm:dpNo})
+\citep{harkins1953}. Conversly, Italian (\texttt{ita}) and the other
 romance languages explicit that position as a default behaviour, usually
-with a free morpheme before the noun -- with the exception of Romanian,
-which uses a intralexematic suffixation on the noun for the article -- :
+with a free morpheme preceding the noun (\ref{exm:dpPre}) or by
+cliticization of the definite article (\ref{exm:dpRon}):
 
 \begin{enumerate}
 \def\labelenumi{(\arabic{enumi})}
 \tightlist
 \item
-  Slavic languages
+  No articles \label{exm:dpNo}
 
   \begin{enumerate}
   \def\labelenumii{\alph{enumii}.}
   \tightlist
   \item
-    (\texttt{cs}, \emph{Reference})\\
-    \gll    Viděl jsem Ø/?ten chlapec který běží\\
-    See.PTCP.PST AUX.1sg DEM Boy.SG pro Run.3sg\\
-    \glt        
+    \texttt{ces} \citep[ 14]{veselovska2014}\\
+    \gll    Chlapec/Marie/Ona/každý miluje ryby/ \{své rodiče\}.\\
+    Boy/Marie/She/Everyone Love.3sg Fish/ \{POSS parent\}\\
+    \glt    \enquote{SUBJ loves {[}the{]} fish/ his parents}
+  \item
+    \texttt{slk} \citep[ 113]{krizomkrazomA1}\\
+    \gll    Večer čítam knihy, píšem referatý\ldots{}\\
+    Evening Read.1SG Book.PL Write.1SG Paper.PL\\
+    \glt    \enquote{In the evening I read {[}the{]} books, I write
+    (school) papers \ldots{}}
   \end{enumerate}
 \item
-  Romance languages
+  Proclitic \label{exm:dpPre}
 
   \begin{enumerate}
   \def\labelenumii{\alph{enumii}.}
   \tightlist
   \item
-    (\texttt{it}, \emph{Reference})\\
-    \gll    Ho visto un/il/*Ø ragazzo che corre\\
-    AUX.1sg See.PTCP.PST DET Boy.SG pro Run.3sg\\
-    \glt  
+    \texttt{ita} \citep[ 60]{bianco2017}\\
+    \gll    Il terremoto ha distrutto la città.\\
+    ART.DEF Earthquake AUX.3sg Destroy.PTCP.PST ART.DEF City\\
+    \glt    \enquote{The earthquake destroyed the city}
   \item
-    (\texttt{fr}, \emph{Reference})\\
-    \gll    J'ai vu un/le/?Ø garçon courir\\
-    I.AUX.1sg See.PTCP.PST DET Boy.SG Run\\
-    \glt  
+    \texttt{fro} \citep[ 3261]{dedole2008}\\
+    \gll    La dame estoit devant la sale.\\
+    ART.DEF Girl Be.3sg ADV ART.DEF Room\\
+    \glt    \enquote{The \emph{dame} is in front to the room}
+  \end{enumerate}
+\item
+  Enclitic
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    \texttt{ron} \citep[ 45]{cojocaru2003} \label{exm:dpRon}\\
+    \gll    Prieten=ul meu este aici.\\
+    Friend=ART.DEF POSS Be.PRES.3sg Here\\
+    \glt    \enquote{My friend is here}
+  \item
+    \texttt{bul} \citep[ 37]{leafgren2011} \label{exm:dpBul}\\
+    \gll    Къде е книга=та ми?\\
+    Where Be.3SG Book=ART.DEF POSS.1SG\\
+    \glt    \enquote{Where is my book?}
   \end{enumerate}
 \end{enumerate}
 
 \section{Theoretical background}\label{theoretical-background}
-
-Two hypothesis: DP as Spec or Phrase.
 
 \begin{figure}
 
@@ -452,13 +474,16 @@ Two hypothesis: DP as Spec or Phrase.
 
 }
 
-\caption{DP and NP phrases}\label{fig:tree1}
+\caption{Structural comparison between NP-over-DP and DP-over-NP Hypotheses}\label{fig:tree1}
 \end{figure}
 
-\subsection{Determiners in Italian}\label{determiners-in-italian}
+Two hypothesis: DP as Spec or Phrase.
 
 \subsection{Implications for the DP-Hypothesis in
 Italian}\label{implications-for-the-dp-hypothesis-in-italian}
+
+\subsection{Implications for the DP-Hypothesis in
+Czech}\label{implications-for-the-dp-hypothesis-in-czech}
 
 \section{Case Study}\label{case-study}
 
@@ -504,12 +529,14 @@ This work was partially supported by the funding grant XXX.
 \section*{Abbreviations}\label{abbreviations}
 \addcontentsline{toc}{section}{Abbreviations}
 
-Languages are indicated by the abbreviations provided in the standard
-ISO 639-1 format \citep{iso639-1}. The linguistic abbreviations adher to
-the widespreadly recognized \emph{Leipzig Glossing Rules}
-\citep{leipzigGlossingRules}.
+Languages are indicated by the abbreviations provided in the ISO 639-3
+format \citep{iso639-3}. Morphological glosses styles adher to the
+widespreadly recognized \emph{Leipzig Glossing Rules}
+\citep{leipzigGlossingRules}, while other abbreviations respect
+\citep{boeckxListOfAbbreviations}.
 
-\section{References}\label{references}
+\section*{References}\label{references}
+\addcontentsline{toc}{section}{References}
 
 \bibliography{bibliography.bib}
 

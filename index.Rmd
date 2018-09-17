@@ -54,27 +54,40 @@ df <- read.csv('data/sentences.csv', header = T, stringsAsFactors = F)
 # Introduction
 
 
-Czech (`cs`) and Slovak (`sk`) are languages of the Slavic branch in the Indo-european family. Alongside a certain morphological complexity in noun declension systems, these languages -- except for Bulgarian and Macedonian [@wals-37 in @wals] -- don't show an overt realization of the Determiner position inside the noun phrase [@harkins1953]. Conversly, Italian (`it`) and the other romance languages explicit that position as a default behaviour, usually with a free morpheme before the noun -- with the exception of Romanian, which uses a intralexematic suffixation on the noun for the article -- :
-
-
-(@)	Slavic languages	
-	a.	(`cs`, *Reference*)  
-		\gll 	Viděl 		 jsem 	Ø/?ten 	chlapec který 	běží  
-			 	See.PTCP.PST AUX.1sg DEM 	Boy.SG	pro 	Run.3sg  
-		\glt 	    
-(@) Romance languages
-	a.	(`it`, *Reference*)  
-		\gll 	Ho 	 	visto 			un/il/\*Ø 	ragazzo che corre  
-			 	AUX.1sg See.PTCP.PST 	DET 		Boy.SG 	pro Run.3sg  
-		\glt  
-	a.	(`fr`, *Reference*)  
-		\gll 	J'ai 		vu 			 un/le/?Ø 	garçon 	courir  
-				I.AUX.1sg 	See.PTCP.PST DET 		Boy.SG 	Run  
-		\glt  
+Czech (`ces`) and Slovak (`slk`) are languages of the Slavic branch in the Indo-european family. Alongside a certain morphological complexity in noun declension systems, these languages --except for Bulgarian (\@ref(exm:dpBul)) and Macedonian [@wals-37 in @wals]-- don't show an overt realization of the Determiner position inside the noun phrase (\@ref(exm:dpNo)) [@harkins1953]. 
+Conversly, Italian (`ita`) and the other romance languages explicit that position as a default behaviour, usually with a free morpheme preceding the noun (\@ref(exm:dpPre)) or by cliticization of the definite article (\@ref(exm:dpRon)):
 
 
 
+(@) No articles (\#exm:dpNo)  
+	a. 	`ces` [@veselovska2014 14]  
+		\gll 	Chlapec/Marie/Ona/každý	miluje 		ryby/ \{své 	rodiče\}.  
+				Boy/Marie/She/Everyone 	Love.3sg 	Fish/ \{POSS 	parent\}  
+		\glt 	"SUBJ loves [the] fish/ his parents"
+	a. 	`slk` [@krizomkrazomA1 113]  
+		\gll 	Večer 	čítam 		knihy, 	píšem 		referatý...  
+				Evening	Read.1SG 	Book.PL Write.1SG	Paper.PL  
+		\glt 	"In the evening I read [the] books, I write (school) papers ..."
 
+(@) Proclitic (\#exm:dpPre)  
+	a.  `ita` [@bianco2017 60]  
+		\gll 	Il 		terremoto 	ha 		distrutto			la 			città.  
+			 	ART.DEF Earthquake 	AUX.3sg Destroy.PTCP.PST 	ART.DEF 	City  
+		\glt  	"The earthquake destroyed the city"
+	a. 	`fro` [@dedole2008 3261]  
+		\gll 	La 			dame 	estoit 	devant 	la 			sale.  
+				ART.DEF 	Girl 	Be.3sg 	ADV		ART.DEF 	Room  
+		\glt 	"The *dame* is in front to the room"
+
+(@) Enclitic
+	a. `ron` [@cojocaru2003 45]  (\#exm:dpRon)  
+		\gll 	Prieten=ul 			meu 	este 		aici.  
+				Friend=ART.DEF 		POSS	Be.PRES.3sg Here  
+		\glt  	"My friend is here"
+	a. `bul` [@leafgren2011 37]  (\#exm:dpBul)  
+		\gll 	Къде 	е 		книга=та 		ми?  
+				Where 	Be.3SG 	Book=ART.DEF 	POSS.1SG  
+		\glt 	"Where is my book?"
 
 
 
@@ -85,32 +98,25 @@ Czech (`cs`) and Slovak (`sk`) are languages of the Slavic branch in the Indo-eu
 
 
 
-Two hypothesis: DP as Spec or Phrase.
 
-```{r tree1, echo=FALSE, engine='tikz', out.width='70%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='DP and NP phrases', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
+```{r tree1, echo=FALSE, engine='tikz', out.width='70%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='Structural comparison between NP-over-DP and DP-over-NP Hypotheses', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
 
-\begin{tikzpicture}
-	\begin{scope}
-		\Tree [ .NP [ .DP D ] [ .N N [ .{...} ] ] ] 
-	\end{scope}
-	\begin{scope}[xshift=12em]
-		\Tree [.root(X) [ .mod(X) head(mod(X)) ] [ .proj(X) head(X) [ .comp(X) ] ] ]
-	\end{scope}
-	\begin{scope}[yshift=12em]
-		\Tree [.DP D [ .NP N [ .{...} ] ] ]
-	\end{scope}
-	\begin{scope}[yshift=12em, xshift=12em]
-		\Tree [.root(Y) head(Y) [ .root(X) head(X) [ .comp(X) ] ] ]
-	\end{scope}
-\end{tikzpicture}
+	\begin{tikzpicture}
+		\begin{scope}
+			\Tree [ .NP [ .DP D ] [ .N N [ .{...} ] ] ] 
+		\end{scope}
+		\begin{scope}[xshift=12em]
+			\Tree [.DP D [ .NP N [ .{...} ] ] ]
+		\end{scope}
+	\end{tikzpicture}
+
 ```
 
+Two hypothesis: DP as Spec or Phrase.
 
 
 
 
-
-## Determiners in Italian
 
 
 
@@ -120,6 +126,11 @@ Two hypothesis: DP as Spec or Phrase.
 
 
 ## Implications for the DP-Hypothesis in Italian
+
+
+
+
+## Implications for the DP-Hypothesis in Czech
 
 
 
@@ -190,10 +201,10 @@ This work was partially supported by the funding grant XXX.
 
 # Abbreviations {-}
 
-Languages are indicated by the abbreviations provided in the standard ISO 639-1 format [@iso639-1]. The linguistic abbreviations adher to the widespreadly recognized *Leipzig Glossing Rules* [@leipzigGlossingRules].
+Languages are indicated by the abbreviations provided in the ISO 639-3 format [@iso639-3]. Morphological glosses styles adher to the widespreadly recognized *Leipzig Glossing Rules* [@leipzigGlossingRules], while other abbreviations respect [@boeckxListOfAbbreviations].
 
 
 
 
 
-# References
+# References {-}
