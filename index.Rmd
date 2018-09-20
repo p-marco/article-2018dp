@@ -59,7 +59,7 @@ Conversly, Italian (`ita`) and the other romance languages explicit that positio
 
 
 
-(@) No articles (\#exm:dpNo)  
+(@) Articlessless (\#exm:dpNo)  
 	a. 	`ces` [@veselovska2014 14]  
 		\gll 	Chlapec/Marie/Ona/každý	miluje 		ryby/ \{své 	rodiče\}.  
 				Boy/Marie/She/Everyone 	Love.3sg 	Fish/ \{POSS 	parent\}  
@@ -77,7 +77,7 @@ Conversly, Italian (`ita`) and the other romance languages explicit that positio
 	a. 	`fro` [@dedole2008 3261]  
 		\gll 	La 			dame 	estoit 	devant 	la 			sale.  
 				ART.DEF 	Girl 	Be.3sg 	ADV		ART.DEF 	Room  
-		\glt 	"The *dame* is in front to the room"
+		\glt 	"The *dame* was in front to the room"
 
 (@) Enclitic
 	a. `ron` [@cojocaru2003 45]  (\#exm:dpRon)  
