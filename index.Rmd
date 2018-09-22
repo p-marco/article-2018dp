@@ -54,7 +54,7 @@ df <- read.csv('data/sentences.csv', header = T, stringsAsFactors = F)
 # Introduction
 
 
-Czech (`ces`) and Slovak (`slk`) are languages of the Slavic branch in the Indo-european family. Alongside a certain morphological complexity in noun declension systems, these languages --except for Bulgarian (\@ref(exm:dpBul)) and Macedonian [@wals-37 in @wals]-- don't show an overt realization of the Determiner position inside the noun phrase (\@ref(exm:dpNo)) [@harkins1953]. 
+Czech (`ces`) and Slovak (`slk`) are languages of the Slavic branch in the Indo-european family. Alongside a certain morphological complexity in noun declension systems, these languages --except for Bulgarian (\@ref(exm:dpBul)) and Macedonian [@wals-37]-- don't show an overt realization of the Determiner position inside the noun phrase (\@ref(exm:dpNo)) [@harkins1953]. 
 Conversly, Italian (`ita`) and the other romance languages explicit that position as a default behaviour, usually with a free morpheme preceding the noun (\@ref(exm:dpPre)) or by cliticization of the definite article (\@ref(exm:dpRon)):
 
 
@@ -88,6 +88,11 @@ Conversly, Italian (`ita`) and the other romance languages explicit that positio
 		\gll 	Къде 	е 		книга=та 		ми?  
 				Where 	Be.3SG 	Book=ART.DEF 	POSS.1SG  
 		\glt 	"Where is my book?"
+
+
+The general idea of this paper is to address the question of how linguistic structures which are not overtly show in L1 can be accessed during the acquisition of a target language which show them. While doing this can be either both purely speculative as grounded on actual data, I will show how the usage of a target collection of linguistic corpora can be useful to test the main hypotheses into narrower facts. The language under observation are indeed a few: on one side `ces` and `slk` as native languages--with no overt position for the articles--on the other `ita` as target language.
+
+The section X provides a theoretical discussion on the top of different theories inside the Generative framework on the status of DP and NP. The section Y is a review of the methods used into the current analysis, in terms of *reproducibility* of the research itself, the policies of data-collection and the explanation of the results. The section W represent a case study made off to test some hypotheses about the categorial differences of DPs during the acquisition.
 
 
 
