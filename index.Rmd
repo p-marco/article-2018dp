@@ -59,7 +59,7 @@ Conversly, Italian (`ita`) and the other romance languages explicit that positio
 
 
 
-(@) Articlessless (\#exm:dpNo)  
+(@) Articleless (\#exm:dpNo)  
 	a. 	`ces` [@veselovska2014 14]  
 		\gll 	Chlapec/Marie/Ona/každý	miluje 		ryby/ \{své 	rodiče\}.  
 				Boy/Marie/She/Everyone 	Love.3sg 	Fish/ \{POSS 	parent\}  
@@ -99,7 +99,7 @@ A summary conclusion (Section \@ref(sec:concl)) closes the paper.
 
 # Theoretical background {#sec:theoryBg}
 
-One of the main areas of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation of how the linguistic structures can be accessed in L2.
+One of the main areas of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning continuum [@rothmanslabakova2017].
 
 
 
