@@ -90,21 +90,20 @@ Conversly, Italian (`ita`) and the other romance languages explicit that positio
 		\glt 	"Where is my book?"
 
 
-The general idea of this paper is to address the question of how linguistic structures which are not overtly show in L1 can be accessed during the acquisition of a target language which show them. While doing this can be either both purely speculative as grounded on actual data, I will show how the usage of a target collection of linguistic corpora can be useful to test the main hypotheses into narrower facts. The language under observation are indeed a few: on one side `ces` and `slk` as native languages--with no overt position for the articles--on the other `ita` as target language.
+The general idea of this paper is to address the question of how linguistic structures which are not overtly marked in L1 can be accessed during the acquisition of a target language that show them. While doing this can be either both purely speculative as grounded on actual data, I will show how the usage of a target collection of linguistic corpora can be useful to test the main hypotheses into narrower facts. The language under observation are indeed a few: on one side `ces` and `slk` as native languages--with no overt position for the articles--on the other `ita` as target language.
 
-The section X provides a theoretical discussion on the top of different theories inside the Generative framework on the status of DP and NP. The section Y is a review of the methods used into the current analysis, in terms of *reproducibility* of the research itself, the policies of data-collection and the explanation of the results. The section W represent a case study made off to test some hypotheses about the categorial differences of DPs during the acquisition.
-
-
-
-
-
-# Theoretical background
+The section \@ref(sec:theoryBg) provides a theoretical discussion on the top of different theories inside the Generative framework on the status of DP and NP. The section \@ref(sec:caseStudy) is twofold: firstly I present the methods used into the current analysis in terms of *reproducibility* of the research, the policies of data-collection and an analysis of the expected results; while the second subsection is built upon a case study made off to test some hypotheses about the categorial differences of DPs during the acquisition of `ita` by `ces` and `slk` native speakers involved in the test.
+A summary conclusion (Section \@ref(sec:concl)) closes the paper.
 
 
 
+# Theoretical background {#sec:theoryBg}
+
+One of the main areas of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation of how the linguistic structures can be accessed in L2.
 
 
-```{r tree1, echo=FALSE, engine='tikz', out.width='70%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='Structural comparison between NP-over-DP and DP-over-NP Hypotheses', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
+
+```{r tree1, echo=FALSE, engine='tikz', out.width='100%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='Structural comparison between NP-over-DP and DP-over-NP Hypotheses', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
 
 	\begin{tikzpicture}
 		\begin{scope}
@@ -145,7 +144,7 @@ Two hypothesis: DP as Spec or Phrase.
 
 
 
-# Case Study
+# Case Study {#sec:caseStudy}
 
 
 
@@ -154,7 +153,7 @@ Two hypothesis: DP as Spec or Phrase.
 
 
 
-## Retrieve the linguistic data 
+## Retrieve the linguistic data
 
 
 
@@ -165,7 +164,10 @@ ggplot(df, aes(fill=df$L1, y=abs(rnorm(nrow(df))), x=df$Corpus)) +
 
 
 
-## Perform a test 
+
+
+
+## Perform a test
 
 Provide 10 noun phrases with different referential structure in terms of animateness with a neutralized article. The students are invited to write full sentences for each one. 
 
@@ -183,7 +185,7 @@ Goals:
 
 
 
-# Conclusion
+# Conclusion {#sec:concl}
 
 
 
@@ -210,6 +212,3 @@ Languages are indicated by the abbreviations provided in the ISO 639-3 format [@
 
 
 
-
-
-# References {-}
