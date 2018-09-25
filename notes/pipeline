@@ -1,0 +1,6 @@
+Pipeline of the project
+
+[X] Split dataframe by corpora 
+[X] Split sub dataframe by L1
+[X] UDPipe Annotation in Conll-U
+[X] Token count

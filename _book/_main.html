@@ -190,15 +190,15 @@ Where Be.3SG Book=ART.DEF POSS.1SG<br />
 </div>
 <div id="sec:theoryBg" class="section level1">
 <h1><span class="header-section-number">2</span> Theoretical background</h1>
-<p>One of the main area of research in Generative studies on Second Language Acquisition (<code>GenSLA</code>) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning continuum <span class="citation">(Rothman and Slabakova <a href="#ref-rothmanslabakova2017">2017</a>)</span>. In this paper I wish to focus on a narrow structure, e.g. the NP-shell.</p>
-<p>Symmetries amongst the DP/NP phrase and the whole sentence are often ereferenced in terms of structure building and phase-related properties <span class="citation">(Chomsky <a href="#ref-chomsky2013">2013</a>; Chomsky <a href="#ref-chomsky2015">2015</a>)</span></p>
+<p>One of the main area of research in Generative studies on Second Language Acquisition (<code>GenSLA</code>) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning continuum <span class="citation">(Rothman and Slabakova <a href="#ref-rothmanslabakova2017">2017</a>)</span>.</p>
+<p>Symmetries amongst the DP/NP phrase and the whole sentence are often referenced in terms of structure building and phase-related properties <span class="citation">(Chomsky <a href="#ref-chomsky2013">2013</a>; Chomsky <a href="#ref-chomsky2015">2015</a>)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:tree1"></span>
 <img src="_main_files/figure-html/tree1-1.svg" alt="Structural comparison between NP-over-DP and DP-over-NP Hypotheses" width="100%" />
 <p class="caption">
 Figure 2.1: Structural comparison between NP-over-DP and DP-over-NP Hypotheses
 </p>
 </div>
-<p>Two hypothesis: DP as Spec or Phrase.</p>
+<p>Two hypotheses: DP as Spec or Phrase.</p>
 <div id="implications-for-the-dp-hypothesis-in-italian" class="section level2">
 <h2><span class="header-section-number">2.1</span> Implications for the DP-Hypothesis in Italian</h2>
 </div>
@@ -210,14 +210,45 @@ Figure 2.1: Structural comparison between NP-over-DP and DP-over-NP Hypotheses
 <h1><span class="header-section-number">3</span> Case Study</h1>
 <div id="retrieve-the-linguistic-data" class="section level2">
 <h2><span class="header-section-number">3.1</span> Retrieve the linguistic data</h2>
+<p>This analysis relies on 3 corpora of Italian L2, subsetted for the current purposes of having Czech and Slovak L1.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(df, <span class="kw">aes</span>(<span class="dt">fill=</span>df<span class="op">$</span>L1, <span class="dt">y=</span><span class="kw">abs</span>(<span class="kw">rnorm</span>(<span class="kw">nrow</span>(df))), <span class="dt">x=</span>df<span class="op">$</span>Corpus)) <span class="op">+</span><span class="st"> </span>
-<span class="st">    </span><span class="kw">geom_bar</span>( <span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Corpora&quot;</span>, <span class="dt">y=</span><span class="st">&quot;Number of texts&quot;</span>, <span class="dt">color=</span><span class="st">&quot;Native Language&quot;</span>)</code></pre></div>
+<span class="st">    </span><span class="kw">geom_bar</span>( <span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Corpora&quot;</span>, <span class="dt">y=</span><span class="st">&quot;Number of texts in the collection&quot;</span>, <span class="dt">color=</span><span class="st">&quot;Native Language&quot;</span>)</code></pre></div>
 <div class="figure"><span id="fig:graphCorpora"></span>
 <img src="_main_files/figure-html/graphCorpora-1.png" alt="Number of texts by different Corpora" width="672" />
 <p class="caption">
 Figure 3.1: Number of texts by different Corpora
 </p>
 </div>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Texts</th>
+<th>Tokens</th>
+<th>Lemma</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Czech-IT</td>
+<td>212 ; 74</td>
+<td>11130 ; 4441</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Merlin</td>
+<td>1 ; 0</td>
+<td>257 ; 1</td>
+<td>&lt;-</td>
+</tr>
+<tr class="odd">
+<td>Valico</td>
+<td>107 ; 17</td>
+<td>16251 ; 3317</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="perform-a-test" class="section level2">
 <h2><span class="header-section-number">3.2</span> Perform a test</h2>

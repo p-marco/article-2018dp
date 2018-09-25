@@ -32,8 +32,12 @@ always_allow_html: yes
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(dplyr)
 library(ggplot2)
 library(knitr)
+library(udpipe)
+udmodel_italian <- udpipe_load_model(file = "script/italian-ud-2.0-170801.udpipe")
+
 
 options(kableExtra.latex.load_packages = FALSE)
 library(kableExtra)
@@ -43,6 +47,34 @@ library(kableExtra)
 df <- read.csv('data/sentences.csv', header = T, stringsAsFactors = F)
 
 ```
+
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+df.czechit.ces <- read.csv('data/partials/CZECH-IT.ces.csv', header = T, stringsAsFactors = F)
+df.czechit.slk <- read.csv('data/partials/CZECH-IT.slk.csv', header = T, stringsAsFactors = F)
+
+df.merlin.ces <- read.csv('data/partials/MERLIN.ces.csv', header = T, stringsAsFactors = F)
+df.merlin.slk <- read.csv('data/partials/MERLIN.slk.csv', header = T, stringsAsFactors = F)
+df.valico.ces <- read.csv('data/partials/VALICO.ces.csv', header = T, stringsAsFactors = F)
+df.valico.slk <- read.csv('data/partials/VALICO.slk.csv', header = T, stringsAsFactors = F)
+
+```
+
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+cleanCorpus <- function(dataname){
+df <- select(dataname, "content")
+txt <- as.character(df)
+x <- udpipe_annotate(udmodel_italian, x = txt, doc_id = seq_along(txt))
+x  <- as.data.frame(x)
+x.clean = subset(x, upos!="PUNCT")
+nrow(x.clean)
+}
+```
+
 
 
 \clearpage
@@ -100,9 +132,10 @@ A summary conclusion (Section \@ref(sec:concl)) closes the paper.
 # Theoretical background {#sec:theoryBg}
 
 One of the main area of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning continuum [@rothmanslabakova2017].
-In this paper I wish to focus on a narrow structure, e.g. the NP-shell.
 
-Symmetries amongst the DP/NP phrase and the whole sentence are often ereferenced in terms of structure building and phase-related properties [@chomsky2013; @chomsky2015]
+
+Symmetries amongst the DP/NP phrase and the whole sentence are often referenced in terms of structure building and phase-related properties [@chomsky2013; @chomsky2015].
+ 
 
 
 ```{r tree1, echo=FALSE, engine='tikz', out.width='100%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='Structural comparison between NP-over-DP and DP-over-NP Hypotheses', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
@@ -118,7 +151,7 @@ Symmetries amongst the DP/NP phrase and the whole sentence are often ereferenced
 
 ```
 
-Two hypothesis: DP as Spec or Phrase.
+Two hypotheses: DP as Spec or Phrase.
 
 
 
@@ -157,15 +190,22 @@ Two hypothesis: DP as Spec or Phrase.
 
 ## Retrieve the linguistic data
 
+This analysis relies on 3 corpora of Italian L2, subsetted for the current purposes of having Czech and Slovak L1.  
 
 
 ```{r graphCorpora, echo=TRUE, fig.width=7, fig.height=4, message=FALSE, fig.cap='Number of texts by different Corpora'}
 ggplot(df, aes(fill=df$L1, y=abs(rnorm(nrow(df))), x=df$Corpus)) + 
-	geom_bar( stat="identity") + labs(x="Corpora", y="Number of texts", color="Native Language")
+	geom_bar( stat="identity") + labs(x="Corpora", y="Number of texts in the collection", color="Native Language")
 ```
 
 
 
+
+|          | Texts                                                                   | Tokens                                                                                | Lemma |
+|----------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------|
+| Czech-IT | `r toString(nrow(df.czechit.ces))` ; `r toString(nrow(df.czechit.slk))` | `r toString(cleanCorpus(df.czechit.ces))` ; `r toString(cleanCorpus(df.czechit.slk))` |       |
+| Merlin   | `r toString(nrow(df.merlin.ces))` ; `r toString(nrow(df.merlin.slk))`   | `r toString(cleanCorpus(df.merlin.ces))` ; `r toString(cleanCorpus(df.merlin.slk))`   | &lt;- |
+| Valico   | `r toString(nrow(df.valico.ces))` ; `r toString(nrow(df.valico.slk))`   | `r toString(cleanCorpus(df.valico.ces))` ; `r toString(cleanCorpus(df.valico.slk))`   |       |
 
 
 

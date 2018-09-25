@@ -494,12 +494,11 @@ One of the main area of research in Generative studies on Second
 Language Acquisition (\texttt{GenSLA}) regards the investigation about
 how the linguistic structures can be accessed in L2 and how the
 transitional stages of acquisition work into the learning continuum
-\citep{rothmanslabakova2017}. In this paper I wish to focus on a narrow
-structure, e.g.~the NP-shell.
+\citep{rothmanslabakova2017}.
 
 Symmetries amongst the DP/NP phrase and the whole sentence are often
-ereferenced in terms of structure building and phase-related properties
-\citep{chomsky2013, chomsky2015}
+referenced in terms of structure building and phase-related properties
+\citep{chomsky2013, chomsky2015}.
 
 \begin{figure}
 
@@ -510,7 +509,7 @@ ereferenced in terms of structure building and phase-related properties
 \caption{Structural comparison between NP-over-DP and DP-over-NP Hypotheses}\label{fig:tree1}
 \end{figure}
 
-Two hypothesis: DP as Spec or Phrase.
+Two hypotheses: DP as Spec or Phrase.
 
 \subsection{Implications for the DP-Hypothesis in
 Italian}\label{implications-for-the-dp-hypothesis-in-italian}
@@ -523,10 +522,13 @@ Czech}\label{implications-for-the-dp-hypothesis-in-czech}
 \subsection{Retrieve the linguistic
 data}\label{retrieve-the-linguistic-data}
 
+This analysis relies on 3 corpora of Italian L2, subsetted for the
+current purposes of having Czech and Slovak L1.
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{ggplot}\NormalTok{(df, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill=}\NormalTok{df}\OperatorTok{$}\NormalTok{L1, }\DataTypeTok{y=}\KeywordTok{abs}\NormalTok{(}\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{nrow}\NormalTok{(df))), }\DataTypeTok{x=}\NormalTok{df}\OperatorTok{$}\NormalTok{Corpus)) }\OperatorTok{+}\StringTok{ }
-\StringTok{    }\KeywordTok{geom_bar}\NormalTok{( }\DataTypeTok{stat=}\StringTok{"identity"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x=}\StringTok{"Corpora"}\NormalTok{, }\DataTypeTok{y=}\StringTok{"Number of texts"}\NormalTok{, }\DataTypeTok{color=}\StringTok{"Native Language"}\NormalTok{)}
+\StringTok{    }\KeywordTok{geom_bar}\NormalTok{( }\DataTypeTok{stat=}\StringTok{"identity"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x=}\StringTok{"Corpora"}\NormalTok{, }\DataTypeTok{y=}\StringTok{"Number of texts in the collection"}\NormalTok{, }\DataTypeTok{color=}\StringTok{"Native Language"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -535,6 +537,17 @@ data}\label{retrieve-the-linguistic-data}
 \includegraphics{_main_files/figure-latex/graphCorpora-1.pdf}
 \caption{\label{fig:graphCorpora}Number of texts by different Corpora}
 \end{figure}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+& Texts & Tokens & Lemma\tabularnewline
+\midrule
+\endhead
+Czech-IT & 212 ; 74 & 11130 ; 4441 &\tabularnewline
+Merlin & 1 ; 0 & 257 ; 1 & \textless{}-\tabularnewline
+Valico & 107 ; 17 & 16251 ; 3317 &\tabularnewline
+\bottomrule
+\end{longtable}
 
 \subsection{Perform a test}\label{perform-a-test}
 
