@@ -1,6 +1,13 @@
 Pipeline of the project
 
-[X] Split dataframe by corpora 
-[X] Split sub dataframe by L1
-[X] UDPipe Annotation in Conll-U
-[X] Token count
+- 25.09
+    [X] Split dataframe by corpora 
+    [X] Split sub dataframe by L1
+    [X] UDPipe Annotation in Conll-U
+    [X] Token count
+- 26.09
+    [X] Create the table with counted items
+    [X] Recognize NPs from dataframe
+    [X] Extract the rows in a certain range (ex.5)
+    [X] Subset a new dataframe with NPs + intorni
+    [ ] See where no PROPN don't have DET

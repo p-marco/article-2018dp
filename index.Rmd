@@ -33,14 +33,15 @@ always_allow_html: yes
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
+library(tidyr)
 library(ggplot2)
 library(knitr)
 library(udpipe)
 udmodel_italian <- udpipe_load_model(file = "script/italian-ud-2.0-170801.udpipe")
 
+library(kableExtra)
 
 options(kableExtra.latex.load_packages = FALSE)
-library(kableExtra)
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -70,8 +71,12 @@ df <- select(dataname, "content")
 txt <- as.character(df)
 x <- udpipe_annotate(udmodel_italian, x = txt, doc_id = seq_along(txt))
 x  <- as.data.frame(x)
+# Remove punctuation tokens
 x.clean = subset(x, upos!="PUNCT")
-nrow(x.clean)
+# Print the output
+	# SHAME 1 : Needed to put out the count from the function
+	# SHAME 2 : The output is reduced by 1 which represent the token of the header ('content')  
+as.numeric(sum(nrow(x.clean) -1))
 }
 ```
 
@@ -193,7 +198,7 @@ Two hypotheses: DP as Spec or Phrase.
 This analysis relies on 3 corpora of Italian L2, subsetted for the current purposes of having Czech and Slovak L1.  
 
 
-```{r graphCorpora, echo=TRUE, fig.width=7, fig.height=4, message=FALSE, fig.cap='Number of texts by different Corpora'}
+```{r graphCorpora, echo=FALSE, fig.width=7, fig.height=4, message=FALSE, fig.cap='Number of texts by different Corpora'}
 ggplot(df, aes(fill=df$L1, y=abs(rnorm(nrow(df))), x=df$Corpus)) + 
 	geom_bar( stat="identity") + labs(x="Corpora", y="Number of texts in the collection", color="Native Language")
 ```
@@ -201,13 +206,58 @@ ggplot(df, aes(fill=df$L1, y=abs(rnorm(nrow(df))), x=df$Corpus)) +
 
 
 
-|          | Texts                                                                   | Tokens                                                                                | Lemma |
-|----------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------|
-| Czech-IT | `r toString(nrow(df.czechit.ces))` ; `r toString(nrow(df.czechit.slk))` | `r toString(cleanCorpus(df.czechit.ces))` ; `r toString(cleanCorpus(df.czechit.slk))` |       |
-| Merlin   | `r toString(nrow(df.merlin.ces))` ; `r toString(nrow(df.merlin.slk))`   | `r toString(cleanCorpus(df.merlin.ces))` ; `r toString(cleanCorpus(df.merlin.slk))`   | &lt;- |
-| Valico   | `r toString(nrow(df.valico.ces))` ; `r toString(nrow(df.valico.slk))`   | `r toString(cleanCorpus(df.valico.ces))` ; `r toString(cleanCorpus(df.valico.slk))`   |       |
+```{r echo = FALSE, results='asis'}
+corpora <- c('Czech-IT', 'Merlin', 'Valico')
+texts.ces <- c(toString(nrow(df.czechit.ces)), toString(nrow(df.merlin.ces)), toString(nrow(df.valico.ces)))
+texts.slk <- c(toString(nrow(df.czechit.slk)), toString(nrow(df.merlin.slk)), toString(nrow(df.valico.slk)))
+tokens.ces <- c(as.numeric(cleanCorpus(df.czechit.ces)), toString(cleanCorpus(df.merlin.ces)), toString(cleanCorpus(df.valico.ces)))
+tokens.slk <- c(toString(cleanCorpus(df.czechit.slk)), toString(cleanCorpus(df.merlin.slk)), toString(cleanCorpus(df.valico.slk)))
+collection <- data.frame(corpora, texts.ces, texts.slk, tokens.ces, tokens.slk)
+
+collection.table <- kable(collection, caption="Amount of data in the collection",  col.names=c(' ', 'ces', 'slk', 'ces', 'slk'), "latex", booktabs=T) %>%
+kable_styling(full_width = T)
+
+add_header_above(collection.table, c(" ", "Texts" = 2, "Tokens" = 2))
+
+```
 
 
+
+
+```{r echo = FALSE}
+
+df <- select(df, "content")
+txt <- as.character(df)
+x <- udpipe_annotate(udmodel_italian, x = txt, doc_id = seq_along(txt))
+library(data.table)
+x <- as.data.table(x)
+x <- subset(x, upos!="PUNCT")
+
+x <- x[, pos_sequence := txt_nextgram(x = upos, n = 2), by = list(doc_id, sentence_id)]
+# tail(sort(table(x$pos_sequence)))
+
+# df.out <- as.data.table(x$pos_sequence, sep=",")
+
+df.out <- as.data.table(sort(table(x$pos_sequence)), sep=",")
+
+
+
+
+df.out <- df.out %>% separate(col = V1, into = c("A", "B"), sep = " ")
+
+#data.table::fwrite(df.out, file = "data/out/pos.csv", sep = ",")
+
+df.noun.begin  <- subset(df.out, A=='NOUN')
+df.noun.end  <- subset(df.out, B=='NOUN')
+
+
+data.table::fwrite(df.noun.begin, file = "data/out/pos.noun.begin.csv", sep = ",")
+data.table::fwrite(df.noun.end, file = "data/out/pos.noun.end.csv", sep = ",")
+
+barplot(df.noun.begin$N, main="Noun+POS", names.arg=df.noun.begin$B)
+barplot(df.noun.end$N, main="POS+Noun", names.arg=df.noun.end$A)
+
+```
 
 ## Perform a test
 

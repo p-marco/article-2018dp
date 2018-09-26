@@ -31,46 +31,6 @@
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apa}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
@@ -210,7 +170,7 @@
 }
 \makeatother
 
-\usepackage{tabularx}
+\usepackage{tabularx,tabu}
 \usepackage{amsfonts}
 \usepackage{booktabs}
 \usepackage{siunitx}
@@ -525,29 +485,31 @@ data}\label{retrieve-the-linguistic-data}
 This analysis relies on 3 corpora of Italian L2, subsetted for the
 current purposes of having Czech and Slovak L1.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(df, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill=}\NormalTok{df}\OperatorTok{$}\NormalTok{L1, }\DataTypeTok{y=}\KeywordTok{abs}\NormalTok{(}\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{nrow}\NormalTok{(df))), }\DataTypeTok{x=}\NormalTok{df}\OperatorTok{$}\NormalTok{Corpus)) }\OperatorTok{+}\StringTok{ }
-\StringTok{    }\KeywordTok{geom_bar}\NormalTok{( }\DataTypeTok{stat=}\StringTok{"identity"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x=}\StringTok{"Corpora"}\NormalTok{, }\DataTypeTok{y=}\StringTok{"Number of texts in the collection"}\NormalTok{, }\DataTypeTok{color=}\StringTok{"Native Language"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{figure}
 \centering
 \includegraphics{_main_files/figure-latex/graphCorpora-1.pdf}
 \caption{\label{fig:graphCorpora}Number of texts by different Corpora}
 \end{figure}
 
-\begin{longtable}[]{@{}llll@{}}
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-5}Amount of data in the collection}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
 \toprule
-& Texts & Tokens & Lemma\tabularnewline
+\multicolumn{1}{c}{ } & \multicolumn{2}{c}{Texts} & \multicolumn{2}{c}{Tokens} \\
+\cmidrule(l{2pt}r{2pt}){2-3} \cmidrule(l{2pt}r{2pt}){4-5}
+  & ces & slk & ces & slk\\
 \midrule
-\endhead
-Czech-IT & 212 ; 74 & 11130 ; 4441 &\tabularnewline
-Merlin & 1 ; 0 & 257 ; 1 & \textless{}-\tabularnewline
-Valico & 107 ; 17 & 16251 ; 3317 &\tabularnewline
+Czech-IT & 212 & 74 & 11129 & 4440\\
+Merlin & 1 & 0 & 256 & 0\\
+Valico & 107 & 17 & 16250 & 3316\\
 \bottomrule
-\end{longtable}
+\end{tabu}
+\end{table}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-6-1.pdf}
+\includegraphics{_main_files/figure-latex/unnamed-chunk-6-2.pdf}
 
 \subsection{Perform a test}\label{perform-a-test}
 
