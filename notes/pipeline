@@ -11,3 +11,4 @@ Pipeline of the project
     [X] Extract the rows in a certain range (ex.5)
     [X] Subset a new dataframe with NPs + intorni
     [ ] See where no PROPN don't have DET
+    [X] Plot PRE-POST Noun distribution

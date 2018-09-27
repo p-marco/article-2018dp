@@ -251,11 +251,23 @@ df.noun.begin  <- subset(df.out, A=='NOUN')
 df.noun.end  <- subset(df.out, B=='NOUN')
 
 
-data.table::fwrite(df.noun.begin, file = "data/out/pos.noun.begin.csv", sep = ",")
-data.table::fwrite(df.noun.end, file = "data/out/pos.noun.end.csv", sep = ",")
+#data.table::fwrite(df.noun.begin, file = "data/out/pos.noun.begin.csv", sep = ",")
+#data.table::fwrite(df.noun.end, file = "data/out/pos.noun.end.csv", sep = ",")
 
-barplot(df.noun.begin$N, main="Noun+POS", names.arg=df.noun.begin$B)
-barplot(df.noun.end$N, main="POS+Noun", names.arg=df.noun.end$A)
+#barplot(df.noun.begin$N, main="Noun+POS", names.arg=df.noun.begin$B)
+#barplot(df.noun.end$N, main="POS+Noun", names.arg=df.noun.end$A)
+
+df.noun.begin.clean  <- df.noun.begin[order(df.noun.begin$B), ]
+df.noun.end.clean  <- df.noun.begin[order(df.noun.end$A), ]
+
+comparison <- data.frame(df.noun.begin.clean$N,df.noun.end.clean$N) 
+
+barplot(t(as.matrix(comparison)), beside=TRUE, names.arg = c(df.noun.begin$B))
+ 
+
+
+
+
 
 ```
 
