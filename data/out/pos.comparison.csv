@@ -1,0 +1,15 @@
+df.noun.begin.clean.B,df.noun.end.clean.N,df.noun.begin.clean.N
+ADJ,544,857
+ADP,913,1516
+ADV,59,440
+AUX,38,574
+CCONJ,109,670
+DET,4471,315
+INTJ,4,7
+NUM,203,40
+PRON,16,481
+PROPN,54,154
+SCONJ,8,127
+SYM,6,9
+VERB,211,503
+X,69,11

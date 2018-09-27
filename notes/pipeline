@@ -12,3 +12,6 @@ Pipeline of the project
     [X] Subset a new dataframe with NPs + intorni
     [ ] See where no PROPN don't have DET
     [X] Plot PRE-POST Noun distribution
+- 27.09
+    [X] Delete NOUN-NOUN Comparison
+    [X] Write something

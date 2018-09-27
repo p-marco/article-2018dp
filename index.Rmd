@@ -36,6 +36,8 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 library(knitr)
+library(data.table)
+
 library(udpipe)
 udmodel_italian <- udpipe_load_model(file = "script/italian-ud-2.0-170801.udpipe")
 
@@ -138,10 +140,24 @@ A summary conclusion (Section \@ref(sec:concl)) closes the paper.
 
 One of the main area of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning continuum [@rothmanslabakova2017].
 
+There are striking differencies amongst languages that display an overt D position and those that do not do it in respect to the syntactic behaviour of NP, as such as Left Branch Extraction allowing, scrambling or adjective extraction. Those are properties are summarized in the table below [in @salzmann2018 from @boskovic2009]: 
 
-Symmetries amongst the DP/NP phrase and the whole sentence are often referenced in terms of structure building and phase-related properties [@chomsky2013; @chomsky2015].
- 
+|                                                 | overt D | covert D |
+|-------------------------------------------------|---------|----------|
+| allow adj extraction from NP                    | no      | yes      |
+| allow LBE                                       | no      | yes      |
+| allow Neg-raising                               | yes     | no       |
+| allow scrambling                                | no      | yes      |
+| allow the majority superlative reading          | yes     | no       |
+| allow trans. nominals with 2 non-lex. genitives | yes     | no       |
+| can be polysynthetic                            | no      | yes      |
+| island sensitivity in head-internal relatives   | no      | yes      |
+| superiority effects in wh-mvt                   | yes     | no       |
 
+Table: Syntactic differencies amongst overt/covert D languages 
+
+
+Since the seminal work of [@abney1987] there have been established two hypothesis to represent this structure: (i) NP-over-DP, for which the DP is at the edge of NP as specifier; (ii) DP-over-NP, where the DP dominates the NP:
 
 ```{r tree1, echo=FALSE, engine='tikz', out.width='100%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='Structural comparison between NP-over-DP and DP-over-NP Hypotheses', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
 
@@ -156,22 +172,15 @@ Symmetries amongst the DP/NP phrase and the whole sentence are often referenced 
 
 ```
 
-Two hypotheses: DP as Spec or Phrase.
-
-
-
-
-
-
-
-
-
 
 
 
 ## Implications for the DP-Hypothesis in Italian
 
 
+
+Symmetries amongst the DP/NP phrase and the whole sentence are often referenced in terms of structure building and phase-related properties [@chomsky2013; @chomsky2015].
+ 
 
 
 ## Implications for the DP-Hypothesis in Czech
@@ -198,10 +207,6 @@ Two hypotheses: DP as Spec or Phrase.
 This analysis relies on 3 corpora of Italian L2, subsetted for the current purposes of having Czech and Slovak L1.  
 
 
-```{r graphCorpora, echo=FALSE, fig.width=7, fig.height=4, message=FALSE, fig.cap='Number of texts by different Corpora'}
-ggplot(df, aes(fill=df$L1, y=abs(rnorm(nrow(df))), x=df$Corpus)) + 
-	geom_bar( stat="identity") + labs(x="Corpora", y="Number of texts in the collection", color="Native Language")
-```
 
 
 
@@ -224,12 +229,11 @@ add_header_above(collection.table, c(" ", "Texts" = 2, "Tokens" = 2))
 
 
 
-```{r echo = FALSE}
+```{r graphNoun, echo = FALSE, message=FALSE, warning=FALSE, fig.cap='Bi-grams distribution of elements near Nouns'}
 
 df <- select(df, "content")
 txt <- as.character(df)
 x <- udpipe_annotate(udmodel_italian, x = txt, doc_id = seq_along(txt))
-library(data.table)
 x <- as.data.table(x)
 x <- subset(x, upos!="PUNCT")
 
@@ -251,19 +255,42 @@ df.noun.begin  <- subset(df.out, A=='NOUN')
 df.noun.end  <- subset(df.out, B=='NOUN')
 
 
-#data.table::fwrite(df.noun.begin, file = "data/out/pos.noun.begin.csv", sep = ",")
-#data.table::fwrite(df.noun.end, file = "data/out/pos.noun.end.csv", sep = ",")
+data.table::fwrite(df.noun.begin, file = "data/out/pos.noun.begin.csv", sep = ",")
+data.table::fwrite(df.noun.end, file = "data/out/pos.noun.end.csv", sep = ",")
 
 #barplot(df.noun.begin$N, main="Noun+POS", names.arg=df.noun.begin$B)
 #barplot(df.noun.end$N, main="POS+Noun", names.arg=df.noun.end$A)
 
 df.noun.begin.clean  <- df.noun.begin[order(df.noun.begin$B), ]
-df.noun.end.clean  <- df.noun.begin[order(df.noun.end$A), ]
+df.noun.end.clean  <- df.noun.end[order(df.noun.end$A), ]
 
-comparison <- data.frame(df.noun.begin.clean$N,df.noun.end.clean$N) 
 
-barplot(t(as.matrix(comparison)), beside=TRUE, names.arg = c(df.noun.begin$B))
- 
+#### Create the complete dataframe
+
+### Step 1 pass values as number
+
+df.noun.begin.clean$N <- as.numeric(df.noun.begin.clean$N)
+df.noun.end.clean$N <- as.numeric(df.noun.end.clean$N)
+
+### 3 columns
+
+comparison <- data.frame(df.noun.begin.clean$B,df.noun.end.clean$N, df.noun.begin.clean$N) 
+
+### Delete 1 row (NOUN) for plot
+comparison <- subset(comparison,df.noun.begin.clean.B!='NOUN') 
+
+ ### WRITE FILE
+
+data.table::fwrite(as.data.table(comparison), file = "data/out/pos.comparison.csv", sep = ",")
+
+
+# Delete column
+graphLegend = comparison$df.noun.begin.clean.B
+comparison$df.noun.begin.clean.B <- NULL
+
+# PLOT
+barplot(t(as.matrix(comparison)), beside=TRUE, names.arg =graphLegend, log="y", las=2, legend=c('Pre Noun', 'Post Noun'), args.legend = list(x="topright"))
+
 
 
 
