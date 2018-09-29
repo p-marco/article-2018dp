@@ -140,6 +140,10 @@ A summary conclusion (Section \@ref(sec:concl)) closes the paper.
 
 One of the main area of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning continuum [@rothmanslabakova2017].
 
+
+
+## The position of DP and NP
+
 There are striking differencies amongst languages that display an overt D position and those that do not do it in respect to the syntactic behaviour of NP, as such as Left Branch Extraction allowing, scrambling or adjective extraction. Those are properties are summarized in the table below [in @salzmann2018 from @boskovic2009]: 
 
 |                                                 | overt D | covert D |
@@ -175,7 +179,7 @@ Since the seminal work of [@abney1987] there have been established two hypothesi
 
 
 
-## Implications for the DP-Hypothesis in Italian
+### Implications for the DP-Hypothesis in Italian
 
 
 
@@ -183,13 +187,13 @@ Symmetries amongst the DP/NP phrase and the whole sentence are often referenced 
  
 
 
-## Implications for the DP-Hypothesis in Czech
+### Implications for the DP-Hypothesis in Czech
 
 
 
 
 
-
+## The role and the study on interlanguage
 
 
 
