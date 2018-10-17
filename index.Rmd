@@ -138,7 +138,24 @@ A summary conclusion (Section \@ref(sec:concl)) closes the paper.
 
 # Theoretical background {#sec:theoryBg}
 
+By a generative-oriented point of view, the human language is a computational procedure which relies on a hierarchical organization of structures, and language variations are reconducted to a parametrizing of choice among them [@adger2013; @chomsky1995; @chomsky1998; @chomsky2013; @chomsky2015; @rizzi2013]:
+
+> We are concerned, then, with states of the language faculty, which we understand to be some array of cognitive traits and capacities, a particular component of the human mind/brain. The language faculty has an initial state, genetically determined; in the normal course of development it passes through a series of states in early childhood, reaching a relatively stable steady state that undergoes little subsequent change, apart from the lexicon. To a good first approximation, the initial state appears to be uniform for the species. [@chomsky1995]
+
+In this perspective, the possibility of comparation is offered either by different languages than among different states of language acquisition: structures can be compared and analized into a coherent grid in order to perform analyses and reveal the similarity and the differences in the parametrizing of syntax.
+
+
+## The role and the study on interlanguage
+
+
+
+Amongst many scholar the role of the native language (L1) has been raised as a factor of possible conditionation in the way which the target language (L2) is acquired during the learning path: an emblematic case is the *transfer* of the knowledge about the structures of the L1 to the target, revealing the intermediate steps of the acquisitional path defined with the term *interlanguage* [@selinker1972], that we can refer as to **Interlanguage Hypothesis** (IlH). 
 One of the main area of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning continuum [@rothmanslabakova2017].
+
+Since the last 20 years, a considerable part of linguistic activity is involved in developing some sort of models to describe how the faculty of language can work, in its biological [@hcf2002], computational [@fodor2001] and cognitive components in a highly interdisciplinary environment.
+Studies on SLA is a fertile field, which relies on comparative and contrastive analyses of linguistic phenomena, either both from an applied view [@ellis1994] than by theoretically grounded perspective focused on GenSLA [@guasti2002; @hawkins2001; @rothmanslabakova2017; @sorace2011]. 
+
+
 
 
 
@@ -193,7 +210,6 @@ Symmetries amongst the DP/NP phrase and the whole sentence are often referenced 
 
 
 
-## The role and the study on interlanguage
 
 
 
