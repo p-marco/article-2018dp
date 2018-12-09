@@ -137,7 +137,7 @@ By a generative-oriented point of view, the human language is a computational pr
 In this perspective, the possibility of comparation is offered either by different languages than among different states of language acquisition: structures can be compared and analized into a coherent grid in order to perform analyses and reveal the similarity and the differences in the parametrizing of syntax.
 
 
-## The role and the study on interlanguage
+## The role and the study of interlanguage
 
 Amongst many scholar the role of the native language (L1) has been raised as a factor of possible conditionation in the way which the target language (L2) is acquired during the learning path: an emblematic case is the *transfer* of the knowledge about the structures of the L1 to the target, revealing the intermediate steps of the acquisitional path, by the hypothesis of *interlanguage* addressed in [@selinker1972]. 
 One of the main area of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning *continuum* [@rothmanslabakova2017].
@@ -257,7 +257,7 @@ With a data set containing the values `a_1,a_2,…,a_n` then the arithmetic mean
 	AM=\frac{1}{n}\sum_{i=1}^n a_i = \frac{a_1 + a_2 + \ldots + a_n}{n} 
 \end{equation}
 
-Then, the amounts of the clusters in the dataset have beeen weighted by their absolute distribution and refactored to a value equal to 1. The plot in Figure \@ref(img:2gramTotal) shows the fine-grained comparison of these clusters in the dataset. 
+Then, the amounts of the clusters in the dataset have beeen weighted by their absolute distribution and refactored to a value equal to 1. The plot in Figure \@ref(img:2gramTotal) shows the fine-grained comparison of these clusters in the dataset^[The category of DET in SYN2010 corresponds to DEM, Q, PRON (not POSS) [@veselovska2014, 20].]. 
 
 
 ```{r corporaNoun, echo = FALSE, message=FALSE, warning=FALSE, fig.cap='\\label{img:2gramTotal}Comparison of 2-grams with N in the datasets'}
@@ -275,20 +275,36 @@ Then, the amounts of the clusters in the dataset have beeen weighted by their ab
 	p + scale_x_discrete(limit = 1:6,
 					labels = c("ADJ+N", "N+ADJ", "DET+N", "N+DET", "ADP+N", "N+ADP")) +
   theme(axis.title.x=element_blank(), axis.title.y=element_blank(), legend.position="bottom")
-```
+``` 
+The presented data does not deal directly with the problem of the evaluation of the automated tasks involved in the process, has to been cleared out that there can be some weaknesses in the usage of mono-lingual trained processors in learner corpora. Alongside, while they can be implemented towards their application in multilingual contexts, it appears that an overall elicitation of this issue cannot be done flawlessly since the complexity of the language acquisition path. Moreover, the different size of the corpora involved in the analysis, which display different magnitude of wideness (nGram is over 40 billions of tokens, the collection 39 thousands), plays a role in the analysis of the data itself and impones a certain relax in threating univocal consequences.
 
+In this sense it appears that a certain tendency can be shown in the examples discussed above. While it shows a certain uniformity in absolute value of DET-N clusters in the dataset, a major shift arises in the position of the adjectives, which can be traced by the typological differencies amongst the languages under analysis:
 
+(@) Position of adj
+	a. `ces`   	(\#exm:adjCes)  
+		\gll 	To 		červené auto.  
+				DEM.NT	ADJ.NT	NOUN.NT  
+		\glt  	"That red car"
+	a. `ita`  	(\#exm:adjIta)  
+		\gll 	Quella 	macchina	rossa.  
+				DEM.FEM NOUN.FEM	ADJ.FEM  
+		\glt 	"That red car"
+
+Conversely, the position of the *collection* in respect to ADP-N clusters can be due either to some lexical choices present in the texts in that dataset which can gain a certain complexity in the noun phrases as well to some inconsistencies due to the application of such tools, than to an effective syntactic difference in such cases.   
 
 # Conclusion {#sec:concl}
 
-Outcomes
+This study aims to show the possibility of a data-based comparison across mono-lingual corpora and learner corpora which yield quantitative information usable in the understanding of second language acquisition, specifically in the syntactic domain of the noun phrases in the italian grammar by Czech and Slovak learners.
+On one side it reconnects to generative framework and deals with the problem of the understanding the phrase structure of the nominal domain [@abney1987, @bernstein2008, @zamparelli1995] and its place in the study of non-native language acquisition [@rothmanslabakova2017].
+For doing it there was established a computational method to deal with different linguistic datasets [@sinclair2005] in order to obtain absolute values of the distribution of the spotted elements in order to retrieve some tendencies in the linguistic productions of non-native speakers.  
 
-	* Typology
-	* 
+In this sense, a diachronic study on such types of learner-based research can shed a light on more fine-grained analyses, specifically to spot on forms of *analogy* or *overcorrection* during the learning path of those construction, and it appears an encouraging perspective to move on in the following steps, aware of the necessary interplay of quantitative and qualitative processes in such interdisciplinary models.
+
 
 # Abbreviations {-}
 
 Languages are indicated by the abbreviations provided in the ISO 639-3 format [@iso639-3]. Morphological glosses styles adher to the widespreadly recognized *Leipzig Glossing Rules* [@leipzigGlossingRules], while other abbreviations respect [@boeckxListOfAbbreviations].
+
 
 # Financial coverage {-}
 

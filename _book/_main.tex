@@ -449,16 +449,19 @@ The section \ref{sec:theoryBg} provides a theoretical discussion on the
 top of different theories inside the Generative framework
 \citep{chomsky1995} on the status of DP and NP. The section
 \ref{sec:caseStudy} is twofold: firstly I present the methods used into
-the current analysis in terms of \emph{reproducibility} of the research,
-the policies of data-collection and an analysis of the expected results;
-while the second subsection is built upon a case study made off to test
-some hypotheses about the categorial differences of DPs during the
-acquisition of \texttt{ita} by \texttt{ces} and \texttt{slk} native
-speakers involved in the test. A summary conclusion (Section
-\ref{sec:concl}) closes the paper.
+the current study in terms of \emph{reproducibility} of the research and
+an analysis of the expected results; while the second subsection is
+built upon a case study made off to test some hypotheses about the
+categorial differences of DPs during the acquisition of \texttt{ita} by
+\texttt{ces} and \texttt{slk} native speakers involved in the test. A
+summary conclusion (Section \ref{sec:concl}) closes the paper.
 
 \hypertarget{sec:theoryBg}{%
 \section{Theoretical background}\label{sec:theoryBg}}
+
+\hypertarget{the-generative-view-on-language}{%
+\subsection{The generative view on
+language}\label{the-generative-view-on-language}}
 
 By a generative-oriented point of view, the human language is a
 computational procedure which relies on a hierarchical organization of
@@ -484,9 +487,9 @@ structures can be compared and analized into a coherent grid in order to
 perform analyses and reveal the similarity and the differences in the
 parametrizing of syntax.
 
-\hypertarget{the-role-and-the-study-on-interlanguage}{%
-\subsection{The role and the study on
-interlanguage}\label{the-role-and-the-study-on-interlanguage}}
+\hypertarget{the-role-and-the-study-of-interlanguage}{%
+\subsection{The role and the study of
+interlanguage}\label{the-role-and-the-study-of-interlanguage}}
 
 Amongst many scholar the role of the native language (L1) has been
 raised as a factor of possible conditionation in the way which the
@@ -516,8 +519,8 @@ grounded perspective focused on GenSLA
 There are striking differencies amongst languages that display an overt
 D position and those that do not do it in respect to the syntactic
 behaviour of NP, as such as Left Branch Extraction allowing, scrambling
-or adjective extraction. Those are properties are summarized in the
-table below \citep[in][ from \citet{boskovic2009}]{salzmann2018}:
+or adjective extraction. Those properties are summarized in the table
+below \citep[in][ from \citet{boskovic2009}]{salzmann2018}:
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Typology of Overt D vs.~Covert D languages}\tabularnewline
@@ -561,7 +564,7 @@ referenced in terms of structure building and phase-related properties
 \citep{chomsky2013, chomsky2015}.
 
 \hypertarget{sec:caseStudy}{%
-\section{The comparative analysis of data}\label{sec:caseStudy}}
+\section{The analysis of data}\label{sec:caseStudy}}
 
 \hypertarget{the-datasets}{%
 \subsection{The datasets}\label{the-datasets}}
@@ -664,7 +667,7 @@ NGram API \citep{ngram2011} on Google Books ITA (1500-).
 The data in the collection was computationally processed in order to
 retrieve quantitative information about the overall distribution of the
 syntactic phrase, specifically elicited in the environments that present
-a Noun element. These clusters have been compared by their condition in
+a Noun element. These clusters have been analyzed by their condition in
 the environment, giving the possibility to compare the distribution of
 the single tags in the antecedent position of a noun or in the
 subsequent position. A general POS tagging pipeline was established with
@@ -690,7 +693,7 @@ While the analysis of the SYN2010 corpus relies on the study of
 \citep{veselovska2014} except for the statistics of ADP+N/N+ADP
 clusters, the results yielded by the diachronic analysis on Google nGram
 were processed by their central tendency, calculated by the arithmetic
-mean (AM) of each value. With a data set containing the values
+mean (AM). With a data set containing the values
 \texttt{a\_1,a\_2,\ldots{},a\_n} then the arithmetic mean is defined by
 the formula:
 
@@ -701,17 +704,81 @@ the formula:
 Then, the amounts of the clusters in the dataset have beeen weighted by
 their absolute distribution and refactored to a value equal to 1. The
 plot in Figure \ref{img:2gramTotal} shows the fine-grained comparison of
-these clusters in the dataset.
+these clusters in the dataset\footnote{The category of DET in SYN2010
+  corresponds to DEM, Q, PRON (not POSS) \citep[20]{veselovska2014}.}.
 
-\begin{figure}
-\centering
-\includegraphics{_main_files/figure-latex/corporaNoun-1.pdf}
-\caption{\label{fig:corporaNoun}\label{img:2gramTotal}Comparison of 2-grams
-with N in the datasets}
-\end{figure}
+\includegraphics{_main_files/figure-latex/corporaNoun-1.pdf} The
+presented data does not deal directly with the problem of the evaluation
+of the automated tasks involved in the process, has to been cleared out
+that there can be some weaknesses in the usage of mono-lingual trained
+processors in learner corpora. Alongside, while they can be implemented
+towards their application in multilingual contexts, it appears that an
+overall elicitation of this issue cannot be done flawlessly since the
+complexity of the language acquisition path. Moreover, the different
+size of the corpora involved in the analysis, which display different
+magnitude of wideness (nGram is over 40 billions of tokens, the
+collection 39 thousands), plays a role in the analysis of the data
+itself and impones a certain relax in threating univocal consequences.
+
+In this sense it appears that a certain tendency can be shown in the
+examples discussed above. While it shows a certain uniformity in
+absolute value of DET-N clusters in the dataset, a major shift arises in
+the position of the adjectives, which can be traced by the typological
+differencies amongst the languages under analysis:
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Position of adj
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    \texttt{ces} \label{exm:adjCes}\\
+    \gll    To červené auto.\\
+    DEM.NT ADJ.NT NOUN.NT\\
+    \glt    \enquote{That red car}
+  \item
+    \texttt{ita} \label{exm:adjIta}\\
+    \gll    Quella macchina rossa.\\
+    DEM.FEM NOUN.FEM ADJ.FEM\\
+    \glt    \enquote{That red car}
+  \end{enumerate}
+\end{enumerate}
+
+Conversely, the position of the \emph{collection} in respect to ADP-N
+clusters can be due either to some lexical choices present in the texts
+in that dataset which can gain a certain complexity in the noun phrases
+as well to some inconsistencies due to the application of such tools,
+than to an effective syntactic difference in such cases.
 
 \hypertarget{sec:concl}{%
 \section{Conclusion}\label{sec:concl}}
+
+This study aims to show the possibility of a data-based comparison
+across mono-lingual corpora and learner corpora which yield quantitative
+information usable in the understanding of second language acquisition,
+specifically in the syntactic domain of the noun phrases in the italian
+grammar by Czech and Slovak learners. On one side it reconnects to
+generative framework and deals with the problem of the understanding the
+phrase structure of the nominal domain \citep[\citet{bernstein2008},
+\citet{zamparelli1995}]{abney1987} and its place in the study of
+non-native language acquisition \citep{rothmanslabakova2017}. For doing
+it there was established a computational method to deal with different
+linguistic datasets \citep{sinclair2005} in order to obtain absolute
+values of the distribution of the spotted elements in order to retrieve
+some tendencies in the linguistic productions of non-native speakers.
+
+In this sense, a diachronic study on such types of learner-based
+research can shed a light on more fine-grained analyses, specifically to
+spot on forms of \emph{analogy} or \emph{overcorrection} during the
+learning path of those construction, and it appears an encouraging
+perspective to move on in the following steps, aware of the necessary
+interplay of quantitative and qualitative processes in such
+interdisciplinary models.
 
 \hypertarget{abbreviations}{%
 \section*{Abbreviations}\label{abbreviations}}
