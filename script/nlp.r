@@ -35,7 +35,6 @@ y <- document_term_frequencies(x[, c("doc_id", "token")])
 y <- document_term_frequencies(x[, c("doc_id", "lemma")])
 write.table(y, "datastats.txt", sep="\t") 
 
-
 ### PLOTS
 
 library(lattice)

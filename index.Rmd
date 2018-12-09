@@ -1,6 +1,6 @@
 ---
 title: "DPs Syntax in acquisition"
-subtitle: "A case study on Italian L2 by Czech ad Slovak learners"
+subtitle: "A case study on Italian L2 by Czech and Slovak learners"
 author: "Marco Petolicchio"
 institution: "Dept. of Romance Languages. Palacky University, Olomouc (CZ)"
 abstract: "Czech and Slovak are languages which don't exhibit a manifest position for the Articles in the Determiner Phrase. The aim of this paper is to show how this structure is accessed during the learning of Italian, a language which presents the articles as for the standard behavior for nouns.\\par
@@ -82,21 +82,13 @@ as.numeric(sum(nrow(x.clean) -1))
 }
 ```
 
-
-
 \clearpage
-
-
-
 
 
 # Introduction
 
-
 Czech (`ces`) and Slovak (`slk`) are languages of the Slavic branch in the Indo-european family. Alongside a certain morphological complexity in noun declension systems, these languages --except for Bulgarian (\@ref(exm:dpBul)) and Macedonian [@wals-37]-- don't show an overt realization of the Determiner position inside the noun phrase (\@ref(exm:dpNo)) [@harkins1953]. 
 Conversly, Italian (`ita`) and the other romance languages explicit that position as a default behaviour, usually with a free morpheme preceding the noun (\@ref(exm:dpPre)) or by cliticization of the definite article (\@ref(exm:dpRon)):
-
-
 
 (@) Articleless (\#exm:dpNo)  
 	a. 	`ces` [@veselovska2014 14]  
@@ -104,7 +96,7 @@ Conversly, Italian (`ita`) and the other romance languages explicit that positio
 				Boy/Marie/She/Everyone 	Love.3sg 	Fish/ \{POSS 	parent\}  
 		\glt 	"SUBJ loves [the] fish/ his parents"
 	a. 	`slk` [@krizomkrazomA1 113]  
-		\gll 	Večer 	čítam 		knihy, 	píšem 		referatý...  
+		\gll 	Večer 	čítam 		knihy, 	píšem 		referáty...  
 				Evening	Read.1SG 	Book.PL Write.1SG	Paper.PL  
 		\glt 	"In the evening I read [the] books, I write (school) papers ..."
 
@@ -128,15 +120,15 @@ Conversly, Italian (`ita`) and the other romance languages explicit that positio
 				Where 	Be.3SG 	Book=ART.DEF 	POSS.1SG  
 		\glt 	"Where is my book?"
 
-
 The general idea of this paper is to address the question of how linguistic structures which are not overtly marked in L1 can be accessed during the acquisition of a target language that show them. While doing this can be either both purely speculative as grounded on actual data, I will show how the usage of a target collection of linguistic corpora can be useful to test the main hypotheses into narrower facts. The language under observation are indeed a few: on one side `ces` and `slk` as native languages--with no overt position for the articles--on the other `ita` as target language.
 
-The section \@ref(sec:theoryBg) provides a theoretical discussion on the top of different theories inside the Generative framework [@chomsky1995] on the status of DP and NP. The section \@ref(sec:caseStudy) is twofold: firstly I present the methods used into the current analysis in terms of *reproducibility* of the research, the policies of data-collection and an analysis of the expected results; while the second subsection is built upon a case study made off to test some hypotheses about the categorial differences of DPs during the acquisition of `ita` by `ces` and `slk` native speakers involved in the test.
+The section \@ref(sec:theoryBg) provides a theoretical discussion on the top of different theories inside the Generative framework [@chomsky1995] on the status of DP and NP. The section \@ref(sec:caseStudy) is twofold: firstly I present the methods used into the current study in terms of *reproducibility* of the research and an analysis of the expected results; while the second subsection is built upon a case study made off to test some hypotheses about the categorial differences of DPs during the acquisition of `ita` by `ces` and `slk` native speakers involved in the test.
 A summary conclusion (Section \@ref(sec:concl)) closes the paper.
 
 
-
 # Theoretical background {#sec:theoryBg}
+
+## The generative view on language
 
 By a generative-oriented point of view, the human language is a computational procedure which relies on a hierarchical organization of structures, and language variations are reconducted to a parametrizing of choice among them [@adger2013; @chomsky1995; @chomsky1998; @chomsky2013; @chomsky2015; @rizzi2013]:
 
@@ -147,42 +139,34 @@ In this perspective, the possibility of comparation is offered either by differe
 
 ## The role and the study on interlanguage
 
-
-
-Amongst many scholar the role of the native language (L1) has been raised as a factor of possible conditionation in the way which the target language (L2) is acquired during the learning path: an emblematic case is the *transfer* of the knowledge about the structures of the L1 to the target, revealing the intermediate steps of the acquisitional path defined with the term *interlanguage* [@selinker1972], that we can refer as to **Interlanguage Hypothesis** (IlH). 
-One of the main area of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning continuum [@rothmanslabakova2017].
+Amongst many scholar the role of the native language (L1) has been raised as a factor of possible conditionation in the way which the target language (L2) is acquired during the learning path: an emblematic case is the *transfer* of the knowledge about the structures of the L1 to the target, revealing the intermediate steps of the acquisitional path, by the hypothesis of *interlanguage* addressed in [@selinker1972]. 
+One of the main area of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning *continuum* [@rothmanslabakova2017].
 
 Since the last 20 years, a considerable part of linguistic activity is involved in developing some sort of models to describe how the faculty of language can work, in its biological [@hcf2002], computational [@fodor2001] and cognitive components in a highly interdisciplinary environment.
 Studies on SLA is a fertile field, which relies on comparative and contrastive analyses of linguistic phenomena, either both from an applied view [@ellis1994] than by theoretically grounded perspective focused on GenSLA [@guasti2002; @hawkins2001; @rothmanslabakova2017; @sorace2011]. 
 
 
-
-
-
 ## The position of DP and NP
 
-There are striking differencies amongst languages that display an overt D position and those that do not do it in respect to the syntactic behaviour of NP, as such as Left Branch Extraction allowing, scrambling or adjective extraction. Those are properties are summarized in the table below [in @salzmann2018 from @boskovic2009]: 
+There are striking differencies amongst languages that display an overt D position and those that do not do it in respect to the syntactic behaviour of NP, as such as Left Branch Extraction allowing, scrambling or adjective extraction. Those properties are summarized in the table below [in @salzmann2018 from @boskovic2009]: 
 
-```{r echo=FALSE, results='asis'}
-dpProperties <- c('allow adj extraction from NP', 'allow LBE', 'allow Neg-raising', 'allow scrambling', 'allow the majority superlative reading', 'allow trans. nominals with 2 non-lex. genitives', 'can be polysynthetic', 'island sensitivity in head-internal relatives', 'superiority effects in wh-mvt')
+|                                                 | Overt D | Covert D |
+|-------------------------------------------------|---------|----------|
+| allow adj extraction from NP                    | no      | yes      |
+| allow LBE                                       | no      | yes      |
+| allow Neg-raising                               | yes     | no       |
+| allow scrambling                                | no      | yes      |
+| allow the majority superlative reading          | yes     | no       |
+| allow trans. nominals with 2 non-lex. genitives | yes     | no       |
+| can be polysynthetic                            | no      | yes      |
+| island sensitivity in head-internal relatives   | no      | yes      |
+| superiority effect in wh-mvt                    | yes     | no       |
 
-overtD <- c('no', 'no', 'yes', 'no', 'yes', 'yes', 'no', 'no', 'yes')
+Table: Typology of Overt D vs. Covert D languages  
 
-covertD <- c('yes', 'yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no')
-dpTable <- data.frame(dpProperties, overtD, covertD)
+Since the seminal work of [@abney1987] there have been established two hypotheses to represent this structure: (i) NP-over-DP, for which the DP is at the edge of NP as specifier; (ii) DP-over-NP, where the DP dominates the NP:
 
-dpTable.table <- kable(dpTable, caption="Syntactic differencies amongst overt/covert D languages",  col.names=c(' ', 'Overt D', 'Covert D'), "latex", booktabs=T) %>%
-kable_styling(full_width = T)%>%
-column_spec(1, width="50%") 
-
-dpTable.table 
-```
-
-
-Since the seminal work of [@abney1987] there have been established two hypothesis to represent this structure: (i) NP-over-DP, for which the DP is at the edge of NP as specifier; (ii) DP-over-NP, where the DP dominates the NP:
-
-```{r tree1, echo=FALSE, engine='tikz', out.width='100%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='Structural comparison between NP-over-DP and DP-over-NP Hypotheses', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
-
+```{r tree1, echo=FALSE, engine='tikz', out.width='100%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='Phrase structure in NP-over-DP vs. DP-over-NP Hypotheses', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
 	\begin{tikzpicture}
 		\begin{scope}
 			\Tree [ .NP [ .DP D ] [ .N N [ .{...} ] ] ] 
@@ -191,176 +175,123 @@ Since the seminal work of [@abney1987] there have been established two hypothesi
 			\Tree [.DP D [ .NP N [ .{...} ] ] ]
 		\end{scope}
 	\end{tikzpicture}
-
 ```
-
-
-
-
-### Implications for the DP-Hypothesis in Italian
-
-
 
 Symmetries amongst the DP/NP phrase and the whole sentence are often referenced in terms of structure building and phase-related properties [@chomsky2013; @chomsky2015].
  
 
+# The analysis of data {#sec:caseStudy}
 
-### Implications for the DP-Hypothesis in Czech
+## The datasets
 
+For the analysis of `ita` as non native language by `ces` and `slk` learners, the 3 corpora below have been subsetted and collected into a dataframe (henceforth "*collection*"): 
 
+* **[GranVALICO](http://www.valico.org/valico_b_CORPUS.html)** and **[VALICO](http://www.valico.org/valico_CORPUS.html)** [@valico]  
+Learner corpora provided by Turin University. They represent the most valuable sources of Italian L2 corpora. They are composed by written texts composed by the students which have the assignment to describe the vignettes provided by the teachers. The corpora are accessible online with an advanced search that permits to filter the data by different parameters (e.g. learners' L1 and education, assignments etc.). 
 
+* **[MERLIN](http://merlin-platform.eu)** [@merlin]  
+The MERLIN Corpus represents a wide-range multilingual documented resource which collects 2.286 texts written by learners of Czech, Italian and German. 
+Started in 2012, the main objective is to show the different levels of acquiring languages by the usage of written texts, relying on the CEFR level schema on L2 acquisition.
+The Italian-L2 subcorpus contains 813 texts.
 
-
-
-
-
-# Case Study {#sec:caseStudy}
-
-
-
-
-
-
-
-
-## Retrieve the linguistic data
-
-This analysis relies on 3 corpora of Italian L2, subsetted for the current purposes of having Czech and Slovak L1.  
+* **[Czech-IT](http://czech-it.github.io)** [@czech-it]  
+The Czech-IT corpus contains chat messages, emails, coversations, surveys and assignments by more than 70 Czech and Slovak learners of Italian language. 
+Started in 2017, it is fully accessible online.
 
 
+Alongside, two monolingual L1 corpora have been used for `ita` and `ces`:
 
 
+* **[Google nGram Viewer Italian](http://books.google.com/ngrams)** [@ngram2011]  
+With more than 40 billions words with an extimated accuracy rate of 95.6% for POS-tagging and 80.0% for dependency parsing [@ngram2012], the Italian corpus represents a wide collection of data to study monolingual `ita` in written form. Developed at Google, the nGram Viewer represents the interface to deal with those corpora in a standalone way.  
+
+* **[Syn2010](http://ucnk.korpus.cz/syn2010.php)** [@syn2010]  
+Part of the big documentation project of Czech National Corpus (CNK, *Český Národní Korpus*), SYN2010 is a representive corpus of contemporary Czech writing containing more than 100 million words, which includes texts by fiction (40%), journal articles (27%), and professional literature (33%).  
 
 
-```{r echo = FALSE, results='asis'}
-corpora <- c('Czech-IT', 'Merlin', 'Valico')
-texts.ces <- c(toString(nrow(df.czechit.ces)), toString(nrow(df.merlin.ces)), toString(nrow(df.valico.ces)))
-texts.slk <- c(toString(nrow(df.czechit.slk)), toString(nrow(df.merlin.slk)), toString(nrow(df.valico.slk)))
-tokens.ces <- c(as.numeric(cleanCorpus(df.czechit.ces)), toString(cleanCorpus(df.merlin.ces)), toString(cleanCorpus(df.valico.ces)))
-tokens.slk <- c(toString(cleanCorpus(df.czechit.slk)), toString(cleanCorpus(df.merlin.slk)), toString(cleanCorpus(df.valico.slk)))
-collection <- data.frame(corpora, texts.ces, texts.slk, tokens.ces, tokens.slk)
+## Methods
 
-collection.table <- kable(collection, caption="Amount of data in the collection",  col.names=c(' ', 'ces', 'slk', 'ces', 'slk'), "latex", booktabs=T) %>%
-kable_styling(full_width = T)
+The data from the three corpora have been subsetted for the relevant analysis, including only the data which present `ita` as the target language by `ces` and `slk` learners and merged into a collection which consists of 411 texts and 35391 tokens. 
+The texts in the collection are computationally processed in subsequential steps in order to retrieve a comparable basis for data analyses. In first place from their original dataset were extracted only the relevant pieces  and then they were processed towards the use of the library UDPIPE [@udpipe2017] in R. The corpora were cleaned by the deletion of non-informative structures (e.g. punctuation marks), and merged (Table \@ref(tab:tableCollection)):
 
-add_header_above(collection.table, c(" ", "Texts" = 2, "Tokens" = 2))
 
+```{r tableCollection, echo = FALSE, results='asis'}
+	corpora <- c('Czech-IT', 'Merlin', 'Valico')
+	texts.ces <- c(toString(nrow(df.czechit.ces)), toString(nrow(df.merlin.ces)), toString(nrow(df.valico.ces)))
+	texts.slk <- c(toString(nrow(df.czechit.slk)), toString(nrow(df.merlin.slk)), toString(nrow(df.valico.slk)))
+	tokens.ces <- c(as.numeric(cleanCorpus(df.czechit.ces)), toString(cleanCorpus(df.merlin.ces)), toString(cleanCorpus(df.valico.ces)))
+	tokens.slk <- c(toString(cleanCorpus(df.czechit.slk)), toString(cleanCorpus(df.merlin.slk)), toString(cleanCorpus(df.valico.slk)))
+	collection <- data.frame(corpora, texts.ces, texts.slk, tokens.ces, tokens.slk)
+	collection.table <- kable(collection, caption="\\label{tab:tableCollection}Structure of data in the collection",  col.names=c(' ', 'ces', 'slk', 'ces', 'slk'), "latex", booktabs=T) %>%
+	kable_styling(full_width = T)
+	add_header_above(collection.table, c(" ", "Texts" = 2, "Tokens" = 2))
+```
+
+Alongside, mono-lingual data have been analyzed for the comparison.  For Czech language the analysis relies on the work of [@veselovska2014] based on SYN2010 [@syn2010]. The statistics on italian corpus are been provided by the submission of syntactic queries against the Google NGram API [@ngram2011] on Google Books ITA (1500-).  
+
+## Results
+
+The data in the collection was computationally processed in order to retrieve quantitative information about the overall distribution of the syntactic phrase, specifically elicited in the environments that present a Noun element. These clusters have been analyzed by their condition in the environment, giving the possibility to compare the distribution of the single tags in the antecedent position of a noun or in the subsequent position. 
+A general POS tagging pipeline was established with the usage of the free library UDPIPE for R. While those tools can reach far beyond the 90% of accuracy in POS-tagging for mono-lingual corpora, it has to been evaluated that learner-based corpora posit a challenge for automated tasks.
+
+The chart below (Figure \@ref(img:2gramCollection)) represents the occurrences of the bigrams clustering with N, extracted by the collection of corpora.
+
+```{r graphNoun, echo = FALSE, message=FALSE, warning=FALSE, fig.cap='\\label{img:2gramCollection}Distribution of 2-grams with N in Collection'}
+	# create a dataset
+	tag=c(rep("ADJ" , 2) , rep("ADP" , 2) , rep("ADV" , 2) , rep("AUX" , 2), rep("CCONJ" , 2), rep("DET" , 2), rep("INTJ" , 2), rep("NUM" , 2), rep("PRON" , 2), rep("PROPN" , 2), rep("SCONJ" , 2), rep("SYM" , 2), rep("VERB" , 2), rep("X" , 2))
+	condition=rep(c("Pos+N" , "N+Pos" ) , 14)
+	value=c(544,857,913,1516,59,440,38,574,109,670,4471,315,4,7,203,40,16,481,54,154,8,127,6,9,211,503,69,11)
+	data=data.frame(tag,condition,value)
+	# Grouped
+	ggplot(data, aes(fill=condition, y=value, x=tag)) + 
+		geom_bar(position="dodge", stat="identity") + scale_y_sqrt() +
+		theme(axis.title.x=element_blank(), axis.title.y=element_blank(), legend.position="bottom")
 ```
 
 
+Alongside, SYN2010 and Google NGram data were compared to the collection.  
+While the analysis of the SYN2010 corpus relies on the study of [@veselovska2014] except for the statistics of ADP+N/N+ADP clusters, the results yielded by the diachronic analysis on Google nGram were processed by their central tendency, calculated by the arithmetic mean (AM). 
+With a data set containing the values `a_1,a_2,…,a_n` then the arithmetic mean is defined by the formula:
+
+\begin{equation}
+	AM=\frac{1}{n}\sum_{i=1}^n a_i = \frac{a_1 + a_2 + \ldots + a_n}{n} 
+\end{equation}
+
+Then, the amounts of the clusters in the dataset have beeen weighted by their absolute distribution and refactored to a value equal to 1. The plot in Figure \@ref(img:2gramTotal) shows the fine-grained comparison of these clusters in the dataset. 
 
 
-```{r graphNoun, echo = FALSE, message=FALSE, warning=FALSE, fig.cap='Bi-grams distribution of elements near Nouns'}
-
-df <- select(df, "content")
-txt <- as.character(df)
-x <- udpipe_annotate(udmodel_italian, x = txt, doc_id = seq_along(txt))
-x <- as.data.table(x)
-x <- subset(x, upos!="PUNCT")
-
-x <- x[, pos_sequence := txt_nextgram(x = upos, n = 2), by = list(doc_id, sentence_id)]
-# tail(sort(table(x$pos_sequence)))
-
-# df.out <- as.data.table(x$pos_sequence, sep=",")
-
-df.out <- as.data.table(sort(table(x$pos_sequence)), sep=",")
-
-
-
-
-df.out <- df.out %>% separate(col = V1, into = c("A", "B"), sep = " ")
-
-#data.table::fwrite(df.out, file = "data/out/pos.csv", sep = ",")
-
-df.noun.begin  <- subset(df.out, A=='NOUN')
-df.noun.end  <- subset(df.out, B=='NOUN')
-
-
-data.table::fwrite(df.noun.begin, file = "data/out/pos.noun.begin.csv", sep = ",")
-data.table::fwrite(df.noun.end, file = "data/out/pos.noun.end.csv", sep = ",")
-
-#barplot(df.noun.begin$N, main="Noun+POS", names.arg=df.noun.begin$B)
-#barplot(df.noun.end$N, main="POS+Noun", names.arg=df.noun.end$A)
-
-df.noun.begin.clean  <- df.noun.begin[order(df.noun.begin$B), ]
-df.noun.end.clean  <- df.noun.end[order(df.noun.end$A), ]
-
-
-#### Create the complete dataframe
-
-### Step 1 pass values as number
-
-df.noun.begin.clean$N <- as.numeric(df.noun.begin.clean$N)
-df.noun.end.clean$N <- as.numeric(df.noun.end.clean$N)
-
-### 3 columns
-
-comparison <- data.frame(df.noun.begin.clean$B,df.noun.end.clean$N, df.noun.begin.clean$N) 
-
-### Delete 1 row (NOUN) for plot
-comparison <- subset(comparison,df.noun.begin.clean.B!='NOUN') 
-
- ### WRITE FILE
-
-data.table::fwrite(as.data.table(comparison), file = "data/out/pos.comparison.csv", sep = ",")
-
-
-# Delete column
-graphLegend = comparison$df.noun.begin.clean.B
-comparison$df.noun.begin.clean.B <- NULL
-
-# PLOT
-barplot(t(as.matrix(comparison)), beside=TRUE, names.arg =graphLegend, log="y", las=2, legend=c('Pre Noun', 'Post Noun'), args.legend = list(x="topright"))
-
-
-
-
-
-
+```{r corporaNoun, echo = FALSE, message=FALSE, warning=FALSE, fig.cap='\\label{img:2gramTotal}Comparison of 2-grams with N in the datasets'}
+	value1=c(0.423825650969128,0.576174349030872,0.908023584109938,0.091976415890062,0.596537351950947,0.403462648049053) 
+	value2=c(0.388294075660243,0.611705924339757,0.934183033848726,0.065816966151275,0.37587484561548,0.62412515438452)  
+	value3=c(0.929800092980009,0.070199907019991,0.980569948186528,0.019430051813472,0.6245583181859434,0.37544168181405657)
+	pos=c("ADJ+N", "N+ADJ", "DET+N", "N+DET", "ADP+N", "N+ADP")
+	x=c(1,2,3,4,5,6)
+	data1 = data.frame(x, pos, value1, value2, value3)
+	p <- ggplot()+
+		geom_line(data=data1,aes(y=value1,x= x,colour="darkblue"),size=1 )+
+		geom_line(data=data1,aes(y=value2,x= x,colour="red"),size=1) +
+		geom_line(data=data1,aes(y=value3,x= x,colour="black"),size=1) +
+		scale_color_discrete(name = "Datasets", labels = c("SYN2010", "nGramIta", "Collection"))
+	p + scale_x_discrete(limit = 1:6,
+					labels = c("ADJ+N", "N+ADJ", "DET+N", "N+DET", "ADP+N", "N+ADP")) +
+  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), legend.position="bottom")
 ```
-
-## Perform a test
-
-Provide 10 noun phrases with different referential structure in terms of animateness with a neutralized article. The students are invited to write full sentences for each one. 
-
-Goals:
-
-* Test the syntactic distribution of phrases (SUBJ vs OBJ)
-* Test the distribution of DETs ([+def], [-def], Ø)
-
-
-
-
-
-
-
 
 
 
 # Conclusion {#sec:concl}
 
+Outcomes
 
-
-
-
-
-
-
-
-
-
-
-# Financial coverage {-}
-
-This work was partially supported by the funding grant XXX.
-
-
-
-
+	* Typology
+	* 
 
 # Abbreviations {-}
 
 Languages are indicated by the abbreviations provided in the ISO 639-3 format [@iso639-3]. Morphological glosses styles adher to the widespreadly recognized *Leipzig Glossing Rules* [@leipzigGlossingRules], while other abbreviations respect [@boeckxListOfAbbreviations].
 
+# Financial coverage {-}
+
+This work was supported by the grant IGA_FF2018_015 (*Románské literatury a jazyky: tradice, současné tendence a nové perspektivy*) financed by the Czech Republic.
 
 

@@ -83,3 +83,17 @@ data.table::fwrite(table.c, file = "data/out/pos.comparison.csv", sep = ",")
 ggplot(df, aes(fill=df$L1, y=abs(rnorm(nrow(df))), x=df$Corpus)) + 
 	geom_bar( stat="identity") + labs(x="Corpora", y="Number of texts in the collection", color="Native Language")
 ```
+
+comparison <- data.frame(df.noun.end.clean$N, df.noun.begin.clean$N) 
+
+
+
+
+barplot(t(as.matrix(comparison)), beside=TRUE, names.arg = c(df.noun.begin.clean$B), log="y", las=2, legend=c('Pre Noun', 'Post Noun'), args.legend = list(x="topright"))
+
+
+table.c <- data.frame(df.noun.begin.clean$B, df.noun.begin.clean$N,df.noun.end.clean$N) 
+table.c <- as.data.table(table.c)
+
+data.table::fwrite(table.c, file = "data/out/pos.comparison.csv", sep = ",")
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ./research/article-2018dp
+Rscript -e "bookdown::render_book('index.Rmd', 'all')"
