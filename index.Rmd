@@ -1,13 +1,15 @@
 ---
-title: "DPs Syntax in acquisition"
-subtitle: "A case study on Italian L2 by Czech and Slovak learners"
+title: "On the syntax of DP in Italian as non-native language"
+subtitle: "A case study on Czech and Slovak learners"
 author: "Marco Petolicchio"
 institution: "Dept. of Romance Languages. Palacky University, Olomouc (CZ)"
-abstract: "Czech and Slovak are languages which don't exhibit a manifest position for the Articles in the Determiner Phrase. The aim of this paper is to show how this structure is accessed during the learning of Italian, a language which presents the articles as for the standard behavior for nouns.\\par
-	\\textbf{Keywords:} Determiner Phrase, Italian L2, Second Language Acquisition, Syntax"
+abstract: " This study aims to investigate over the internal syntax of Noun phrases in non-native italian by Czech and Slovak learners. The typological difference in those languages are used to reconnect with the generative models on language acquisition, while the linguistic data is threated quantitatively to show the gap between L2 production and the standard behavior in mono-lingual corpora.\\par
+	\\textbf{Keywords:} Corpus linguistics, Determiner phrase, Italian L2, Second language acquisition, Syntax"
 site: bookdown::bookdown_site
 documentclass: scrartcl
 output:
+  word_document:
+    toc: yes
   bookdown::gitbook: 
     split_by: none
     split_bibliography: false
@@ -176,8 +178,8 @@ Since the seminal work of [@abney1987] there have been established two hypothese
 		\end{scope}
 	\end{tikzpicture}
 ```
-
-Symmetries amongst the DP/NP phrase and the whole sentence are often referenced in terms of structure building and phase-related properties [@chomsky2013; @chomsky2015].
+Following the approach in [@abney1987], it has been assumed in generative studies that nouns project a higher functional category--Determiners--with their phrase DP, where a restricted class of items can be there (articles, quantifiers ecc.).
+The *DP Hypothesis* aims to reconnect the internal geometry of the Determiner Phrase to the generalized phrase structure of complex elements [@bernstein2008; @zamparelli1995] for which, independently to the actual presence of DP elements at a morphological level, the functional category of DP stills in the derivation.
  
 
 # The analysis of data {#sec:caseStudy}
@@ -257,7 +259,7 @@ With a data set containing the values `a_1,a_2,…,a_n` then the arithmetic mean
 	AM=\frac{1}{n}\sum_{i=1}^n a_i = \frac{a_1 + a_2 + \ldots + a_n}{n} 
 \end{equation}
 
-Then, the amounts of the clusters in the dataset have beeen weighted by their absolute distribution and refactored to a value equal to 1. The plot in Figure \@ref(img:2gramTotal) shows the fine-grained comparison of these clusters in the dataset^[The category of DET in SYN2010 corresponds to DEM, Q, PRON (not POSS) [@veselovska2014, 20].]. 
+The amounts of the clusters in the dataset have beeen weighted by their absolute distribution and refactored to a value equal to 1. The plot below (Figure \@ref(img:2gramTotal)) shows the fine-grained comparison of these clusters in the dataset^[The category of DET in SYN2010 corresponds to DEM, Q, PRON (not POSS) [@veselovska2014, 20].]. 
 
 
 ```{r corporaNoun, echo = FALSE, message=FALSE, warning=FALSE, fig.cap='\\label{img:2gramTotal}Comparison of 2-grams with N in the datasets'}
@@ -267,20 +269,19 @@ Then, the amounts of the clusters in the dataset have beeen weighted by their ab
 	pos=c("ADJ+N", "N+ADJ", "DET+N", "N+DET", "ADP+N", "N+ADP")
 	x=c(1,2,3,4,5,6)
 	data1 = data.frame(x, pos, value1, value2, value3)
-	p <- ggplot()+
+	ggplot()+
 		geom_line(data=data1,aes(y=value1,x= x,colour="darkblue"),size=1 )+
 		geom_line(data=data1,aes(y=value2,x= x,colour="red"),size=1) +
 		geom_line(data=data1,aes(y=value3,x= x,colour="black"),size=1) +
-		scale_color_discrete(name = "Datasets", labels = c("SYN2010", "nGramIta", "Collection"))
-	p + scale_x_discrete(limit = 1:6,
-					labels = c("ADJ+N", "N+ADJ", "DET+N", "N+DET", "ADP+N", "N+ADP")) +
-  theme(axis.title.x=element_blank(), axis.title.y=element_blank(), legend.position="bottom")
+		scale_color_discrete(name = "Datasets", labels = c("SYN2010", "nGramIta", "Collection")) +
+		scale_x_discrete(limit = 1:6, labels = c("ADJ+N", "N+ADJ", "DET+N", "N+DET", "ADP+N", "N+ADP")) +
+  		theme(axis.title.x=element_blank(), axis.title.y=element_blank(), legend.position="bottom")
 ``` 
 The presented data does not deal directly with the problem of the evaluation of the automated tasks involved in the process, has to been cleared out that there can be some weaknesses in the usage of mono-lingual trained processors in learner corpora. Alongside, while they can be implemented towards their application in multilingual contexts, it appears that an overall elicitation of this issue cannot be done flawlessly since the complexity of the language acquisition path. Moreover, the different size of the corpora involved in the analysis, which display different magnitude of wideness (nGram is over 40 billions of tokens, the collection 39 thousands), plays a role in the analysis of the data itself and impones a certain relax in threating univocal consequences.
 
 In this sense it appears that a certain tendency can be shown in the examples discussed above. While it shows a certain uniformity in absolute value of DET-N clusters in the dataset, a major shift arises in the position of the adjectives, which can be traced by the typological differencies amongst the languages under analysis:
 
-(@) Position of adj
+(@) 
 	a. `ces`   	(\#exm:adjCes)  
 		\gll 	To 		červené auto.  
 				DEM.NT	ADJ.NT	NOUN.NT  
