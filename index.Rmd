@@ -3,7 +3,7 @@ title: "On the syntax of DP in Italian as non-native language"
 subtitle: "A case study on Czech and Slovak learners"
 author: "Marco Petolicchio"
 institution: "Dept. of Romance Languages. Palacky University, Olomouc (CZ)"
-abstract: " This study aims to investigate over the internal syntax of Noun phrases in non-native italian by Czech and Slovak learners. The typological difference in those languages are used to reconnect with the generative models on language acquisition, while the linguistic data is threated quantitatively to show the gap between L2 production and the standard behavior in mono-lingual corpora.\\par
+abstract: " This study aims to investigate over the internal syntax of Noun phrases in non-native Italian by Czech and Slovak learners. The typological difference in those languages are used to reconnect with the generative models on language acquisition, while the linguistic data is threated quantitatively to show the gap between L2 production and the standard behaviour in mono-lingual corpora.\\par
 	\\textbf{Keywords:} Corpus linguistics, Determiner phrase, Italian L2, Second language acquisition, Syntax"
 site: bookdown::bookdown_site
 documentclass: scrartcl
@@ -122,9 +122,9 @@ Conversly, Italian (`ita`) and the other romance languages explicit that positio
 				Where 	Be.3SG 	Book=ART.DEF 	POSS.1SG  
 		\glt 	"Where is my book?"
 
-The general idea of this paper is to address the question of how linguistic structures which are not overtly marked in L1 can be accessed during the acquisition of a target language that show them. While doing this can be either both purely speculative as grounded on actual data, I will show how the usage of a target collection of linguistic corpora can be useful to test the main hypotheses into narrower facts. The language under observation are indeed a few: on one side `ces` and `slk` as native languages--with no overt position for the articles--on the other `ita` as target language.
+The general idea of this paper is to address the question of how linguistic structures which are not overtly marked in L1 can be accessed during the acquisition of a target language which show them. While doing this can be either both purely speculative and meanwhile grounded on actual data, I will show how the usage of a targeted linguistic corpora which can be useful to concentrate the main hypotheses into narrower facts. The language under observation are manifold: on one side Czech (`ces`) and Slovak (`slk`) as native languages--with no position for the articles--with Italian (`ita`) on the other side as the target language.
 
-The section \@ref(sec:theoryBg) provides a theoretical discussion on the top of different theories inside the Generative framework [@chomsky1995] on the status of DP and NP. The section \@ref(sec:caseStudy) is twofold: firstly I present the methods used into the current study in terms of *reproducibility* of the research and an analysis of the expected results; while the second subsection is built upon a case study made off to test some hypotheses about the categorial differences of DPs during the acquisition of `ita` by `ces` and `slk` native speakers involved in the test.
+The section \@ref(sec:theoryBg) provides a theoretical discussion on the top of different theories inside the generative framework [@chomsky1995] on the status of DP and NP. The section \@ref(sec:caseStudy) is twofold: firstly I present the methods used into the current study in terms of *reproducibility* of research and an analysis of the expected results; while the second subsection is built upon a case study made test hypotheses about the categorial differences of DPs during the acquisition of `ita` by `ces` and `slk` native speakers involved in the test.
 A summary conclusion (Section \@ref(sec:concl)) closes the paper.
 
 
@@ -132,25 +132,25 @@ A summary conclusion (Section \@ref(sec:concl)) closes the paper.
 
 ## The generative view on language
 
-By a generative-oriented point of view, the human language is a computational procedure which relies on a hierarchical organization of structures, and language variations are reconducted to a parametrizing of choice among them [@adger2013; @chomsky1995; @chomsky1998; @chomsky2013; @chomsky2015; @rizzi2013]:
+From a generative-oriented point of view, the human language is a computational procedure which relies on a hierarchical organization of structures, and language variations are connected to a parametrizing of choice among those structures [@adger2013; @chomsky1995; @chomsky1998; @chomsky2013; @chomsky2015; @rizzi2013]:
 
 > We are concerned, then, with states of the language faculty, which we understand to be some array of cognitive traits and capacities, a particular component of the human mind/brain. The language faculty has an initial state, genetically determined; in the normal course of development it passes through a series of states in early childhood, reaching a relatively stable steady state that undergoes little subsequent change, apart from the lexicon. To a good first approximation, the initial state appears to be uniform for the species. [@chomsky1995]
 
-In this perspective, the possibility of comparation is offered either by different languages than among different states of language acquisition: structures can be compared and analized into a coherent grid in order to perform analyses and reveal the similarity and the differences in the parametrizing of syntax.
+From this perspective, the possibility of comparation is offered either by different languages or among different states of language acquisition: structures can be compared and analysed into a coherent grid in order to perform further analyses and reveal similarities and differences in the parametrizing of syntax.
 
 
 ## The role and the study of interlanguage
 
-Amongst many scholar the role of the native language (L1) has been raised as a factor of possible conditionation in the way which the target language (L2) is acquired during the learning path: an emblematic case is the *transfer* of the knowledge about the structures of the L1 to the target, revealing the intermediate steps of the acquisitional path, by the hypothesis of *interlanguage* addressed in [@selinker1972]. 
-One of the main area of research in Generative studies on Second Language Acquisition (`GenSLA`) regards the investigation about how the linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning *continuum* [@rothmanslabakova2017].
+For many scholars the role of the native language (L1) carries possible conditioning for the way which the target language (L2) is acquired during the path to learning: an emblematic case is the *transfer* of the knowledge about the structures of the L1 to the target, revealing the intermediate steps of the acquisitional path, which is the hypothesis of *interlanguage* addressed by Selinker [@selinker1972]. 
+One of the main areas of research in Generative Studies on Second Language Acquisition (`GenSLA`) regards investigating how linguistic structures can be accessed in L2 and how the transitional stages of acquisition work into the learning *continuum* [@rothmanslabakova2017].
 
-Since the last 20 years, a considerable part of linguistic activity is involved in developing some sort of models to describe how the faculty of language can work, in its biological [@hcf2002], computational [@fodor2001] and cognitive components in a highly interdisciplinary environment.
-Studies on SLA is a fertile field, which relies on comparative and contrastive analyses of linguistic phenomena, either both from an applied view [@ellis1994] than by theoretically grounded perspective focused on GenSLA [@guasti2002; @hawkins2001; @rothmanslabakova2017; @sorace2011]. 
+During the last 20 years, a considerable part of linguistic activity has been involved in developing some sort of models to describe how the faculty of language works, through its biological [@hcf2002], computational [@fodor2001] and cognitive components in a highly interdisciplinary environment.
+SLA is a fertile field, which relies on the comparative and contrastive analyses of linguistic phenomena, either both from an applied view [@ellis1994] or by theoretically grounded perspective focused on GenSLA [@guasti2002; @hawkins2001; @rothmanslabakova2017; @sorace2011]. 
 
 
 ## The position of DP and NP
 
-There are striking differencies amongst languages that display an overt D position and those that do not do it in respect to the syntactic behaviour of NP, as such as Left Branch Extraction allowing, scrambling or adjective extraction. Those properties are summarized in the table below [in @salzmann2018 from @boskovic2009]: 
+There are striking differences between languages that display an overt D position and those that do not in respect to the syntactic behaviour of NP, as such as Left Branch Extraction allowing, scrambling or adjective extraction. Those properties are summarized in the table below [in @salzmann2018 from @boskovic2009]: 
 
 |                                                 | Overt D | Covert D |
 |-------------------------------------------------|---------|----------|
@@ -166,7 +166,7 @@ There are striking differencies amongst languages that display an overt D positi
 
 Table: Typology of Overt D vs. Covert D languages  
 
-Since the seminal work of [@abney1987] there have been established two hypotheses to represent this structure: (i) NP-over-DP, for which the DP is at the edge of NP as specifier; (ii) DP-over-NP, where the DP dominates the NP:
+Since Abney's seminal work [@abney1987] there two hypotheses have been established to represent this structure: (i) NP-over-DP, for which the DP is at the edge of NP as specifier; (ii) DP-over-NP, where the DP dominates the NP:
 
 ```{r tree1, echo=FALSE, engine='tikz', out.width='100%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'svg', fig.cap='Phrase structure in NP-over-DP vs. DP-over-NP Hypotheses', engine.opts = list(template = "latex/tikz2pdf.tex"), fig.align='center'}
 	\begin{tikzpicture}
@@ -178,43 +178,43 @@ Since the seminal work of [@abney1987] there have been established two hypothese
 		\end{scope}
 	\end{tikzpicture}
 ```
-Following the approach in [@abney1987], it has been assumed in generative studies that nouns project a higher functional category--Determiners--with their phrase DP, where a restricted class of items can be there (articles, quantifiers ecc.).
-The *DP Hypothesis* aims to reconnect the internal geometry of the Determiner Phrase to the generalized phrase structure of complex elements [@bernstein2008; @zamparelli1995] for which, independently to the actual presence of DP elements at a morphological level, the functional category of DP stills in the derivation.
+Following this approach [@abney1987], in generative studies it is assumed  that nouns project a higher functional category--Determiners--with their phrase DP, wherein a restricted class of items can be (articles, quantifiers etc.).
+The *DP Hypothesis* aims to reconnect the internal geometry of the Determiner Phrase to the generalized phrase structure of complex elements [@bernstein2008; @zamparelli1995] for which, independent of the actual presence of DP elements on a morphological level, the functional category of DP is still in the derivation.
  
 
 # The analysis of data {#sec:caseStudy}
 
 ## The datasets
 
-For the analysis of `ita` as non native language by `ces` and `slk` learners, the 3 corpora below have been subsetted and collected into a dataframe (henceforth "*collection*"): 
+For the analysis of `ita` as a non-native language for `ces` and `slk` learners, the 3 corpora below have been subsetted and collected into a dataframe (henceforth "*collection*"): 
 
 * **[GranVALICO](http://www.valico.org/valico_b_CORPUS.html)** and **[VALICO](http://www.valico.org/valico_CORPUS.html)** [@valico]  
-Learner corpora provided by Turin University. They represent the most valuable sources of Italian L2 corpora. They are composed by written texts composed by the students which have the assignment to describe the vignettes provided by the teachers. The corpora are accessible online with an advanced search that permits to filter the data by different parameters (e.g. learners' L1 and education, assignments etc.). 
+Learner corpora provided by Turin University. They represent the most valuable sources of Italian L2 corpora. They are composed by written texts composed by the students which have the assignment to describe vignettes provided by the teachers. The corpora are accessible online with an advanced search that permits filtering the data along different parameters (e.g. learners' L1 and education, assignments etc.). 
 
 * **[MERLIN](http://merlin-platform.eu)** [@merlin]  
-The MERLIN Corpus represents a wide-range multilingual documented resource which collects 2.286 texts written by learners of Czech, Italian and German. 
-Started in 2012, the main objective is to show the different levels of acquiring languages by the usage of written texts, relying on the CEFR level schema on L2 acquisition.
+The MERLIN Corpus is a wide-ranging multilingual documented resource which collects 2.286 texts written by learners of Czech, Italian and German. 
+Started in 2012, the main objective is to show the different levels of language acquisition using written texts, relying on the CEFR level schema on L2 acquisition.
 The Italian-L2 subcorpus contains 813 texts.
 
 * **[Czech-IT](http://czech-it.github.io)** [@czech-it]  
-The Czech-IT corpus contains chat messages, emails, coversations, surveys and assignments by more than 70 Czech and Slovak learners of Italian language. 
+The Czech-IT corpus contains chat messages, emails, conversations, surveys and assignments by more than 70 Czech and Slovak learners of Italian language. 
 Started in 2017, it is fully accessible online.
 
 
-Alongside, two monolingual L1 corpora have been used for `ita` and `ces`:
+Additionally, two monolingual L1 corpora have been used for `ita` and `ces`:
 
 
 * **[Google nGram Viewer Italian](http://books.google.com/ngrams)** [@ngram2011]  
-With more than 40 billions words with an extimated accuracy rate of 95.6% for POS-tagging and 80.0% for dependency parsing [@ngram2012], the Italian corpus represents a wide collection of data to study monolingual `ita` in written form. Developed at Google, the nGram Viewer represents the interface to deal with those corpora in a standalone way.  
+With more than 40 billions words with an estimated accuracy rate of 95.6% for POS-tagging and 80.0% for dependency parsing [@ngram2012], the Italian corpus represents a wide collection of data to study monolingual `ita` in written form. Developed at Google, the nGram Viewer presents an interface to deal with those corpora in a standalone way.  
 
 * **[Syn2010](http://ucnk.korpus.cz/syn2010.php)** [@syn2010]  
-Part of the big documentation project of Czech National Corpus (CNK, *Český Národní Korpus*), SYN2010 is a representive corpus of contemporary Czech writing containing more than 100 million words, which includes texts by fiction (40%), journal articles (27%), and professional literature (33%).  
+Part of the a documentation project of the Czech National Corpus (CNK, *Český Národní Korpus*), SYN2010 is a representive corpus of contemporary Czech writing containing more than 100 million words, which includes texts of fiction (40%), journal articles (27%), and professional literature (33%).  
 
 
 ## Methods
 
-The data from the three corpora have been subsetted for the relevant analysis, including only the data which present `ita` as the target language by `ces` and `slk` learners and merged into a collection which consists of 411 texts and 35391 tokens. 
-The texts in the collection are computationally processed in subsequential steps in order to retrieve a comparable basis for data analyses. In first place from their original dataset were extracted only the relevant pieces  and then they were processed towards the use of the library UDPIPE [@udpipe2017] in R. The corpora were cleaned by the deletion of non-informative structures (e.g. punctuation marks), and merged (Table \@ref(tab:tableCollection)):
+The data from the three corpora have been subsett for analysis, including only the data which present `ita` as the target language by `ces` and `slk` learners and merged into a collection which consists of 411 texts and 35391 tokens. 
+The texts in the collection are computationally processed in sequential steps in order to retrieve a comparable basis for data analyses. In the first step, only the relevant pieces were extracted from their original dataset and then they were processed towards the use of the library UDPIPE [@udpipe2017] in R. The corpora were cleaned by the deletion of non-informative structures (e.g. punctuation marks), and merged (Table \@ref(tab:tableCollection)):
 
 
 ```{r tableCollection, echo = FALSE, results='asis'}
@@ -229,14 +229,14 @@ The texts in the collection are computationally processed in subsequential steps
 	add_header_above(collection.table, c(" ", "Texts" = 2, "Tokens" = 2))
 ```
 
-Alongside, mono-lingual data have been analyzed for the comparison.  For Czech language the analysis relies on the work of [@veselovska2014] based on SYN2010 [@syn2010]. The statistics on italian corpus are been provided by the submission of syntactic queries against the Google NGram API [@ngram2011] on Google Books ITA (1500-).  
+Additionally, mono-lingual data were been analysed for comparison.  For the Czech language, the analysis relies on the work of Veselovská [@veselovska2014] based on SYN2010 [@syn2010]. The statistics on the  Italian corpus were been provided by the submission of syntactic queries against the Google NGram API [@ngram2011] on Google Books ITA (1500-).  
 
 ## Results
 
-The data in the collection was computationally processed in order to retrieve quantitative information about the overall distribution of the syntactic phrase, specifically elicited in the environments that present a Noun element. These clusters have been analyzed by their condition in the environment, giving the possibility to compare the distribution of the single tags in the antecedent position of a noun or in the subsequent position. 
-A general POS tagging pipeline was established with the usage of the free library UDPIPE for R. While those tools can reach far beyond the 90% of accuracy in POS-tagging for mono-lingual corpora, it has to been evaluated that learner-based corpora posit a challenge for automated tasks.
+The data in the collection was computationally processed in order to retrieve quantitative information about the overall distribution of the syntactic phrase, specifically elicited in the environments that present a Noun element. These clusters were been analysed by their condition in the environment, giving the possibility to compare the distribution of single tags in the antecedent position of a noun or in the subsequent position. 
+A general POS tagging pipeline was established with the usage of the free library UDPIPE for R. While those tools reach far beyond 90% accuracy in POS-tagging for mono-lingual corpora, it was also determined that learner-based corpora posit a challenge for automated tasks.
 
-The chart below (Figure \@ref(img:2gramCollection)) represents the occurrences of the bigrams clustering with N, extracted by the collection of corpora.
+The chart below (Figure \@ref(img:2gramCollection)) presents the occurrence of bigrams clustering with N, extracted from the collection of corpora.
 
 ```{r graphNoun, echo = FALSE, message=FALSE, warning=FALSE, fig.cap='\\label{img:2gramCollection}Distribution of 2-grams with N in Collection'}
 	# create a dataset
@@ -251,15 +251,15 @@ The chart below (Figure \@ref(img:2gramCollection)) represents the occurrences o
 ```
 
 
-Alongside, SYN2010 and Google NGram data were compared to the collection.  
-While the analysis of the SYN2010 corpus relies on the study of [@veselovska2014] except for the statistics of ADP+N/N+ADP clusters, the results yielded by the diachronic analysis on Google nGram were processed by their central tendency, calculated by the arithmetic mean (AM). 
-With a data set containing the values `a_1,a_2,…,a_n` then the arithmetic mean is defined by the formula:
+Additionally, SYN2010 and Google NGram data were compared to the collection.  
+While the analysis of the SYN2010 corpus relied on the study by Veselovská  [@veselovska2014] except for the statistics of ADP+N/N+ADP clusters, results yielded by the diachronic analysis on Google nGram were processed by their central tendency, calculated by the arithmetic mean (AM). 
+With a data set containing the values `a_1,a_2,…,a_n` thus the arithmetic mean is defined by the formula:
 
 \begin{equation}
 	AM=\frac{1}{n}\sum_{i=1}^n a_i = \frac{a_1 + a_2 + \ldots + a_n}{n} 
 \end{equation}
 
-The amounts of the clusters in the dataset have beeen weighted by their absolute distribution and refactored to a value equal to 1. The plot below (Figure \@ref(img:2gramTotal)) shows the fine-grained comparison of these clusters in the dataset^[The category of DET in SYN2010 corresponds to DEM, Q, PRON (not POSS) [@veselovska2014, 20].]. 
+The amounts of the clusters in the dataset were weighted by their absolute distribution and refactored to a value equal to 1. The plot below (Figure \@ref(img:2gramTotal)) shows the close comparison of these clusters in the dataset^[The category of DET in SYN2010 corresponds to DEM, Q, PRON (not POSS) [@veselovska2014, 20].]. 
 
 
 ```{r corporaNoun, echo = FALSE, message=FALSE, warning=FALSE, fig.cap='\\label{img:2gramTotal}Comparison of 2-grams with N in the datasets'}
@@ -277,9 +277,9 @@ The amounts of the clusters in the dataset have beeen weighted by their absolute
 		scale_x_discrete(limit = 1:6, labels = c("ADJ+N", "N+ADJ", "DET+N", "N+DET", "ADP+N", "N+ADP")) +
   		theme(axis.title.x=element_blank(), axis.title.y=element_blank(), legend.position="bottom")
 ``` 
-The presented data does not deal directly with the problem of the evaluation of the automated tasks involved in the process, has to been cleared out that there can be some weaknesses in the usage of mono-lingual trained processors in learner corpora. Alongside, while they can be implemented towards their application in multilingual contexts, it appears that an overall elicitation of this issue cannot be done flawlessly since the complexity of the language acquisition path. Moreover, the different size of the corpora involved in the analysis, which display different magnitude of wideness (nGram is over 40 billions of tokens, the collection 39 thousands), plays a role in the analysis of the data itself and impones a certain relax in threating univocal consequences.
+The presented data does not deal directly with the problem of evaluating the automated tasks involved in the process, and had to be cleared out indicating that there can be some weaknesses in the usage of mono-lingual trained processors in learner corpora. Moreover, while these can be implemented towards an application in multilingual contexts, it appears that an overall application of this process cannot be done flawlessly since the complexity of the language acquisition path. Also, the differing sizes of the corpora involved in the analysis, which display different magnitude of breadth (nGram is over 40 billion of tokens, the collection 39 thousand), and plays a role in the analysis of the data itself.
 
-In this sense it appears that a certain tendency can be shown in the examples discussed above. While it shows a certain uniformity in absolute value of DET-N clusters in the dataset, a major shift arises in the position of the adjectives, which can be traced by the typological differencies amongst the languages under analysis:
+In this sense it appears that a certain tendency can be seen in the examples discussed above. While it shows a certain uniformity in the absolute value of DET-N clusters in the dataset, a major shift arises in the position of the adjectives, which can be traced by the typological differences among the languages under analysis:
 
 (@) 
 	a. `ces`   	(\#exm:adjCes)  
@@ -291,24 +291,24 @@ In this sense it appears that a certain tendency can be shown in the examples di
 				DEM.FEM NOUN.FEM	ADJ.FEM  
 		\glt 	"That red car"
 
-Conversely, the position of the *collection* in respect to ADP-N clusters can be due either to some lexical choices present in the texts in that dataset which can gain a certain complexity in the noun phrases as well to some inconsistencies due to the application of such tools, than to an effective syntactic difference in such cases.   
+Conversely, the position of the *collection* in respect to ADP-N clusters can be due to either some lexical choices present in the texts of that dataset, which can contribute to complexity in the noun phrases as well to some inconsistencies due to the application of these tools, more than to effective syntactic difference in such cases.   
 
 # Conclusion {#sec:concl}
 
-This study aims to show the possibility of a data-based comparison across mono-lingual corpora and learner corpora which yield quantitative information usable in the understanding of second language acquisition, specifically in the syntactic domain of the noun phrases in the italian grammar by Czech and Slovak learners.
-On one side it reconnects to generative framework and deals with the problem of the understanding the phrase structure of the nominal domain [@abney1987, @bernstein2008, @zamparelli1995] and its place in the study of non-native language acquisition [@rothmanslabakova2017].
-For doing it there was established a computational method to deal with different linguistic datasets [@sinclair2005] in order to obtain absolute values of the distribution of the spotted elements in order to retrieve some tendencies in the linguistic productions of non-native speakers.  
+This study examined the possibility of a data-based comparison across mono-lingual corpora and learner corpora which yielded quantitative information useful for understanding of second language acquisition, specifically in the syntactic domain of the noun phrases in the Italian grammar by Czech and Slovak learners.
+On one side it reconnects to a generative framework and deals with the problem of the understanding phrase structure in the nominal domain [@abney1987, @bernstein2008, @zamparelli1995] and its place in the study of non-native language acquisition [@rothmanslabakova2017].
+A computational method was established to deal with different linguistic datasets [@sinclair2005] in order to obtain absolute values of the distribution of the select elements, and to identify some tendencies in the linguistic productions of non-native speakers.  
 
-In this sense, a diachronic study on such types of learner-based research can shed a light on more fine-grained analyses, specifically to spot on forms of *analogy* or *overcorrection* during the learning path of those construction, and it appears an encouraging perspective to move on in the following steps, aware of the necessary interplay of quantitative and qualitative processes in such interdisciplinary models.
+In this sense, a diachronic study on such types of learner-based research can shed a light on more fine-grained analyses, specifically to spot forms of *analogy* or *overcorrection* during the learning path of those construction, and it appears an encouraging perspective to follow in the subsequent steps, aware of the necessary interplay of quantitative and qualitative processes in such interdisciplinary models.
 
 
 # Abbreviations {-}
 
-Languages are indicated by the abbreviations provided in the ISO 639-3 format [@iso639-3]. Morphological glosses styles adher to the widespreadly recognized *Leipzig Glossing Rules* [@leipzigGlossingRules], while other abbreviations respect [@boeckxListOfAbbreviations].
+Languages are indicated by the abbreviations provided in the ISO 639-3 format [@iso639-3]. Morphological gloss styles adher to the widely recognized *Leipzig Glossing Rules* [@leipzigGlossingRules], while other abbreviations respect [@boeckxListOfAbbreviations].
 
 
 # Financial coverage {-}
 
-This work was supported by the grant IGA_FF2018_015 (*Románské literatury a jazyky: tradice, současné tendence a nové perspektivy*) financed by the Czech Republic.
+This work was supported by the grant IGA_FF2018_015 (*Románské literatury a jazyky: tradice, současné tendence a nové perspektivy*) financed by the Ministry of Education, Czech Republic.
 
 
